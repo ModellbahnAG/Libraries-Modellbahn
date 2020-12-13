@@ -1,0 +1,18 @@
+{
+  "name": "Modellbahn",
+  "version": "1.0.0",
+  "description": "manage multiple functions for the ModellbahnAG",
+  "keywords": "modellbahn",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/DennisMoschina/Libraries-Modellbahn.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Dennis Moschina",
+      "url": "dev.moschina.de"
+    }
+  ]
+}
