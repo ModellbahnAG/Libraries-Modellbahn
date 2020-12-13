@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Manage the SmartButton library more easily",
   "keywords": "button, deactivate, manage",
+  "include": "Libraries-Modellbahn/ButtonManager",
   "repository":
   {
     "type": "git",
@@ -16,7 +17,6 @@
   [
     {
       "name": "Dennis Moschina",
-      "url": "dev.moschina.de"
     }
   ]
 }
