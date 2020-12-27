@@ -9,14 +9,14 @@ NeoPixel::NeoPixel(int numPixel, byte pin) {
 }
 
 void NeoPixel::fill(CRGB color, int start, int end) {
-  for (int i = start; i < this->end; i++) {
+  for (int i = start; i < end; i++) {
     this->leds[i] = color;
   }
   FastLED.show();
 }
 
 void NeoPixel::fill(int r, int g, int b, int start, int end) {
-  for (int i = start; i < this->end; i++) {
+  for (int i = start; i < end; i++) {
     this->leds[i].setRGB(r, g, b);
   }
   FastLED.show();
