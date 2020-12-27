@@ -8,11 +8,18 @@
     "type": "git",
     "url": "https://github.com/DennisMoschina/Libraries-Modellbahn.git"
   },
+  "export": {
+    "include":
+    [
+      "/src/*.cpp",
+      "/include/*.h"
+    ]
+  },
   "authors":
   [
     {
       "name": "Dennis Moschina",
-      "url": "dev.moschina.de"
+      "url": "https://dev.moschina.de"
     }
   ]
 }
