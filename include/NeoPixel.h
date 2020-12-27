@@ -8,7 +8,13 @@ class NeoPixel {
   public:
     NeoPixel(int numPixel, byte pin);
 
-    void setStripColor(CRGB color);
+    void fill(CRGB color, int start = 0, int end = numPixel - 1);
+    void fill(int r, int g, int b, int start = 0, int end = numPixel - 1);
+
+    void setColor(int pixel, CRGB color);
+    void setColor(int pixel, int r, int g, int b);
+
+    void off();
 
   private:
     byte pin;
