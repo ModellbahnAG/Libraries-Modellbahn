@@ -1,28 +1,171 @@
 \hypertarget{class_neo_pixel}{}\doxysection{Neo\+Pixel Klassenreferenz}
 \label{class_neo_pixel}\index{NeoPixel@{NeoPixel}}
+
+
+Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an.  
+
+
+
+
+{\ttfamily \#include $<$Neo\+Pixel.\+h$>$}
+
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_neo_pixel_ad8b7c19841e7078a41f7e50e74271db6}\label{class_neo_pixel_ad8b7c19841e7078a41f7e50e74271db6}} 
-{\bfseries Neo\+Pixel} (int num\+Pixel, byte pin)
-\item 
-\mbox{\Hypertarget{class_neo_pixel_ab1f2e05810abdcb3618958c9ff1e39b1}\label{class_neo_pixel_ab1f2e05810abdcb3618958c9ff1e39b1}} 
-void {\bfseries fill} (CRGB color, int start=0, int end=num\+Pixel -\/ 1)
-\item 
-\mbox{\Hypertarget{class_neo_pixel_aa3e555c1279e81c504599234c67a51dc}\label{class_neo_pixel_aa3e555c1279e81c504599234c67a51dc}} 
-void {\bfseries fill} (int r, int g, int b, int start=0, int end=num\+Pixel -\/ 1)
-\item 
-\mbox{\Hypertarget{class_neo_pixel_a48e473bce2dbc3d45095e78fe2e777d3}\label{class_neo_pixel_a48e473bce2dbc3d45095e78fe2e777d3}} 
-void {\bfseries set\+Color} (int pixel, CRGB color)
-\item 
-\mbox{\Hypertarget{class_neo_pixel_ab337da3f080b3945b375fcb8630eb4f5}\label{class_neo_pixel_ab337da3f080b3945b375fcb8630eb4f5}} 
-void {\bfseries set\+Color} (int pixel, int r, int g, int b)
-\item 
+\mbox{\hyperlink{class_neo_pixel_a6ad2ee6bce11578331c17cdc9c6f9122}{Neo\+Pixel}} (int num\+Pixel, int pin)
+\begin{DoxyCompactList}\small\item\em Erstelle einen LED strip mit einer festen Anzahl an LEDs und steuere diesen leicht an. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}{fill}} (CRGB color, int start=0, int end=-\/1)
+\begin{DoxyCompactList}\small\item\em Ändere die Farbe aller LEDs in einem bestimmten Intervall. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_a0a3f77bcb43b73e4b88b13446291317b}{fill}} (int r, int g, int b, int start=0, int end=-\/1)
+\begin{DoxyCompactList}\small\item\em Ändere die Farbe aller LEDs in einem bestimmten Intervall. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}{set\+Color}} (CRGB color, int pixel)
+\begin{DoxyCompactList}\small\item\em Ändere die Farbe einer LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}{set\+Color}} (int r, int g, int b, int pixel)
+\begin{DoxyCompactList}\small\item\em Ändere die Farbe einer LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_ae1b399d75b88295065e6846d3e0459c9}{off}} ()
+\begin{DoxyCompactList}\small\item\em Schalte alle LEDs aus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_neo_pixel_aca47a825b00115e8b1cd33793cd3a170}{get\+Number\+Of\+Pixel}} ()
+\begin{DoxyCompactList}\small\item\em Erhalte die Anzahl der LEDs im strip. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. 
+
+Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigeres wird empfohlen die Fast\+LED Bibliothek direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden!
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000001}{Noch zu erledigen}}]Weitere Pins verfügbar machen \end{DoxyRefDesc}
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_neo_pixel_a6ad2ee6bce11578331c17cdc9c6f9122}\label{class_neo_pixel_a6ad2ee6bce11578331c17cdc9c6f9122}} 
+\index{NeoPixel@{NeoPixel}!NeoPixel@{NeoPixel}}
+\index{NeoPixel@{NeoPixel}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{NeoPixel()}{NeoPixel()}}
+{\footnotesize\ttfamily Neo\+Pixel\+::\+Neo\+Pixel (\begin{DoxyParamCaption}\item[{int}]{num\+Pixel,  }\item[{int}]{pin }\end{DoxyParamCaption})}
+
+
+
+Erstelle einen LED strip mit einer festen Anzahl an LEDs und steuere diesen leicht an. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em num\+Pixel} & Die Anzahl der LEDs im LED strip \\
+\hline
+{\em pin} & Der Pin, an den der LED strip angeschlossen ist\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Referenz zur Instanz von \mbox{\hyperlink{class_neo_pixel}{Neo\+Pixel}}
+\end{DoxyReturn}
+Derzeit können nur die Pins 2 bis 13 verwendet werden! 
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}\label{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}} 
+\index{NeoPixel@{NeoPixel}!fill@{fill}}
+\index{fill@{fill}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::fill (\begin{DoxyParamCaption}\item[{CRGB}]{color,  }\item[{int}]{start = {\ttfamily 0},  }\item[{int}]{end = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Ändere die Farbe aller LEDs in einem bestimmten Intervall. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em color} & Die Farbe die die LEDs bekommen sollen \\
+\hline
+{\em start} & Start des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist 0 \\
+\hline
+{\em end} & Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die Anzahl der LEDs im strip \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neo_pixel_a0a3f77bcb43b73e4b88b13446291317b}\label{class_neo_pixel_a0a3f77bcb43b73e4b88b13446291317b}} 
+\index{NeoPixel@{NeoPixel}!fill@{fill}}
+\index{fill@{fill}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::fill (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{int}]{start = {\ttfamily 0},  }\item[{int}]{end = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Ändere die Farbe aller LEDs in einem bestimmten Intervall. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em r} & Der Rotanteil der Farbe die die LEDs bekommen sollen \\
+\hline
+{\em g} & Der Grünanteil der Farbe die die LEDs bekommen sollen \\
+\hline
+{\em b} & Der Blauanteil der Farbe die die LEDs bekommen sollen \\
+\hline
+{\em start} & Start des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist 0 \\
+\hline
+{\em end} & Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die Anzahl der LEDs im strip \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neo_pixel_aca47a825b00115e8b1cd33793cd3a170}\label{class_neo_pixel_aca47a825b00115e8b1cd33793cd3a170}} 
+\index{NeoPixel@{NeoPixel}!getNumberOfPixel@{getNumberOfPixel}}
+\index{getNumberOfPixel@{getNumberOfPixel}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{getNumberOfPixel()}{getNumberOfPixel()}}
+{\footnotesize\ttfamily int Neo\+Pixel\+::get\+Number\+Of\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erhalte die Anzahl der LEDs im strip. 
+
+\begin{DoxyReturn}{Rückgabe}
+Anzahl der LEDs im strip 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_neo_pixel_ae1b399d75b88295065e6846d3e0459c9}\label{class_neo_pixel_ae1b399d75b88295065e6846d3e0459c9}} 
-void {\bfseries off} ()
-\end{DoxyCompactItemize}
+\index{NeoPixel@{NeoPixel}!off@{off}}
+\index{off@{off}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{off()}{off()}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Schalte alle LEDs aus. 
+
+Alle LEDs werden auf die Farbe Schwarz gesetzt \mbox{\Hypertarget{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}\label{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}} 
+\index{NeoPixel@{NeoPixel}!setColor@{setColor}}
+\index{setColor@{setColor}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::set\+Color (\begin{DoxyParamCaption}\item[{CRGB}]{color,  }\item[{int}]{pixel }\end{DoxyParamCaption})}
+
+
+
+Ändere die Farbe einer LED. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em color} & Die Farbe die die LED bekommen soll \\
+\hline
+{\em pixel} & Die Nummer der LED die die Farbe bekommen soll \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}\label{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}} 
+\index{NeoPixel@{NeoPixel}!setColor@{setColor}}
+\index{setColor@{setColor}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::set\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{int}]{pixel }\end{DoxyParamCaption})}
+
+
+
+Ändere die Farbe einer LED. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em r} & Der Rotanteil der Farbe die die LED bekommen soll \\
+\hline
+{\em g} & Der Grünanteil der Farbe die die LED bekommen soll \\
+\hline
+{\em b} & Der Blauanteil der Farbe die die LED bekommen soll \\
+\hline
+{\em pixel} & Die Nummer der LED die die Farbe bekommen soll \\
+\hline
+\end{DoxyParams}
 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/dennis/\+Cloud\+Station/\+Schule/\+Modellbahn/\+Libraries-\/\+Modellbahn/include/Neo\+Pixel.\+h\end{DoxyCompactItemize}
+/\+Users/dennis/\+Cloud\+Station/\+Schule/\+Modellbahn/\+Libraries-\/\+Modellbahn/include/\mbox{\hyperlink{_neo_pixel_8h}{Neo\+Pixel.\+h}}\end{DoxyCompactItemize}

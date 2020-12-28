@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['handlebutton_26',['handleButton',['../class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7',1,'Button']]],
-  ['handlebuttons_27',['handleButtons',['../class_button_manager.html#a7ed76c846a1b745a5bb75d1af973fd83',1,'ButtonManager']]]
+  ['fill_33',['fill',['../class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413',1,'NeoPixel::fill(CRGB color, int start=0, int end=-1)'],['../class_neo_pixel.html#a0a3f77bcb43b73e4b88b13446291317b',1,'NeoPixel::fill(int r, int g, int b, int start=0, int end=-1)']]]
 ];

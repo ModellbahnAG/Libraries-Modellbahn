@@ -99,28 +99,311 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <div class="title">NeoPixel Klassenreferenz</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an.  
+ <a href="class_neo_pixel.html#details">Mehr ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_neo_pixel_8h_source.html">NeoPixel.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
-<tr class="memitem:ad8b7c19841e7078a41f7e50e74271db6"><td class="memItemLeft" align="right" valign="top"><a id="ad8b7c19841e7078a41f7e50e74271db6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>NeoPixel</b> (int numPixel, byte pin)</td></tr>
-<tr class="separator:ad8b7c19841e7078a41f7e50e74271db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1f2e05810abdcb3618958c9ff1e39b1"><td class="memItemLeft" align="right" valign="top"><a id="ab1f2e05810abdcb3618958c9ff1e39b1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fill</b> (CRGB color, int start=0, int end=numPixel - 1)</td></tr>
-<tr class="separator:ab1f2e05810abdcb3618958c9ff1e39b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e555c1279e81c504599234c67a51dc"><td class="memItemLeft" align="right" valign="top"><a id="aa3e555c1279e81c504599234c67a51dc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fill</b> (int r, int g, int b, int start=0, int end=numPixel - 1)</td></tr>
-<tr class="separator:aa3e555c1279e81c504599234c67a51dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48e473bce2dbc3d45095e78fe2e777d3"><td class="memItemLeft" align="right" valign="top"><a id="a48e473bce2dbc3d45095e78fe2e777d3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (int pixel, CRGB color)</td></tr>
-<tr class="separator:a48e473bce2dbc3d45095e78fe2e777d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab337da3f080b3945b375fcb8630eb4f5"><td class="memItemLeft" align="right" valign="top"><a id="ab337da3f080b3945b375fcb8630eb4f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (int pixel, int r, int g, int b)</td></tr>
-<tr class="separator:ab337da3f080b3945b375fcb8630eb4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1b399d75b88295065e6846d3e0459c9"><td class="memItemLeft" align="right" valign="top"><a id="ae1b399d75b88295065e6846d3e0459c9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>off</b> ()</td></tr>
+<tr class="memitem:a6ad2ee6bce11578331c17cdc9c6f9122"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#a6ad2ee6bce11578331c17cdc9c6f9122">NeoPixel</a> (int numPixel, int pin)</td></tr>
+<tr class="memdesc:a6ad2ee6bce11578331c17cdc9c6f9122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstelle einen LED strip mit einer festen Anzahl an LEDs und steuere diesen leicht an.  <a href="class_neo_pixel.html#a6ad2ee6bce11578331c17cdc9c6f9122">Mehr ...</a><br /></td></tr>
+<tr class="separator:a6ad2ee6bce11578331c17cdc9c6f9122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e07318dc4aa8becf3edd3f75366413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413">fill</a> (CRGB color, int start=0, int end=-1)</td></tr>
+<tr class="memdesc:a67e07318dc4aa8becf3edd3f75366413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Farbe aller LEDs in einem bestimmten Intervall.  <a href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413">Mehr ...</a><br /></td></tr>
+<tr class="separator:a67e07318dc4aa8becf3edd3f75366413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3f77bcb43b73e4b88b13446291317b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#a0a3f77bcb43b73e4b88b13446291317b">fill</a> (int r, int g, int b, int start=0, int end=-1)</td></tr>
+<tr class="memdesc:a0a3f77bcb43b73e4b88b13446291317b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Farbe aller LEDs in einem bestimmten Intervall.  <a href="class_neo_pixel.html#a0a3f77bcb43b73e4b88b13446291317b">Mehr ...</a><br /></td></tr>
+<tr class="separator:a0a3f77bcb43b73e4b88b13446291317b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd86a2fe450c8c6dcce8c993789135c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#acd86a2fe450c8c6dcce8c993789135c2">setColor</a> (CRGB color, int pixel)</td></tr>
+<tr class="memdesc:acd86a2fe450c8c6dcce8c993789135c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Farbe einer LED.  <a href="class_neo_pixel.html#acd86a2fe450c8c6dcce8c993789135c2">Mehr ...</a><br /></td></tr>
+<tr class="separator:acd86a2fe450c8c6dcce8c993789135c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db05ed6677dec2eb19e731dc79463b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">setColor</a> (int r, int g, int b, int pixel)</td></tr>
+<tr class="memdesc:a5db05ed6677dec2eb19e731dc79463b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Farbe einer LED.  <a href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">Mehr ...</a><br /></td></tr>
+<tr class="separator:a5db05ed6677dec2eb19e731dc79463b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b399d75b88295065e6846d3e0459c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">off</a> ()</td></tr>
+<tr class="memdesc:ae1b399d75b88295065e6846d3e0459c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schalte alle LEDs aus.  <a href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">Mehr ...</a><br /></td></tr>
 <tr class="separator:ae1b399d75b88295065e6846d3e0459c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca47a825b00115e8b1cd33793cd3a170"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#aca47a825b00115e8b1cd33793cd3a170">getNumberOfPixel</a> ()</td></tr>
+<tr class="memdesc:aca47a825b00115e8b1cd33793cd3a170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erhalte die Anzahl der LEDs im strip.  <a href="class_neo_pixel.html#aca47a825b00115e8b1cd33793cd3a170">Mehr ...</a><br /></td></tr>
+<tr class="separator:aca47a825b00115e8b1cd33793cd3a170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. </p>
+<p>Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigeres wird empfohlen die FastLED Bibliothek direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden!</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Noch zu erledigen:</a></b></dt><dd>Weitere Pins verfügbar machen </dd></dl>
+</div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a6ad2ee6bce11578331c17cdc9c6f9122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad2ee6bce11578331c17cdc9c6f9122">&#9670;&nbsp;</a></span>NeoPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NeoPixel::NeoPixel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numPixel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erstelle einen LED strip mit einer festen Anzahl an LEDs und steuere diesen leicht an. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numPixel</td><td>Die Anzahl der LEDs im LED strip </td></tr>
+    <tr><td class="paramname">pin</td><td>Der Pin, an den der LED strip angeschlossen ist</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Referenz zur Instanz von <a class="el" href="class_neo_pixel.html" title="Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an...">NeoPixel</a></dd></dl>
+<p>Derzeit können nur die Pins 2 bis 13 verwendet werden! </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a67e07318dc4aa8becf3edd3f75366413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e07318dc4aa8becf3edd3f75366413">&#9670;&nbsp;</a></span>fill() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NeoPixel::fill </td>
+          <td>(</td>
+          <td class="paramtype">CRGB&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ändere die Farbe aller LEDs in einem bestimmten Intervall. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>Die Farbe die die LEDs bekommen sollen </td></tr>
+    <tr><td class="paramname">start</td><td>Start des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist 0 </td></tr>
+    <tr><td class="paramname">end</td><td>Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die Anzahl der LEDs im strip </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a3f77bcb43b73e4b88b13446291317b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3f77bcb43b73e4b88b13446291317b">&#9670;&nbsp;</a></span>fill() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NeoPixel::fill </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ändere die Farbe aller LEDs in einem bestimmten Intervall. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Der Rotanteil der Farbe die die LEDs bekommen sollen </td></tr>
+    <tr><td class="paramname">g</td><td>Der Grünanteil der Farbe die die LEDs bekommen sollen </td></tr>
+    <tr><td class="paramname">b</td><td>Der Blauanteil der Farbe die die LEDs bekommen sollen </td></tr>
+    <tr><td class="paramname">start</td><td>Start des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist 0 </td></tr>
+    <tr><td class="paramname">end</td><td>Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die Anzahl der LEDs im strip </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca47a825b00115e8b1cd33793cd3a170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca47a825b00115e8b1cd33793cd3a170">&#9670;&nbsp;</a></span>getNumberOfPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NeoPixel::getNumberOfPixel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erhalte die Anzahl der LEDs im strip. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Anzahl der LEDs im strip </dd></dl>
+
+</div>
+</div>
+<a id="ae1b399d75b88295065e6846d3e0459c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b399d75b88295065e6846d3e0459c9">&#9670;&nbsp;</a></span>off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NeoPixel::off </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Schalte alle LEDs aus. </p>
+<p>Alle LEDs werden auf die Farbe Schwarz gesetzt </p>
+
+</div>
+</div>
+<a id="acd86a2fe450c8c6dcce8c993789135c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd86a2fe450c8c6dcce8c993789135c2">&#9670;&nbsp;</a></span>setColor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NeoPixel::setColor </td>
+          <td>(</td>
+          <td class="paramtype">CRGB&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ändere die Farbe einer LED. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>Die Farbe die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">pixel</td><td>Die Nummer der LED die die Farbe bekommen soll </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5db05ed6677dec2eb19e731dc79463b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db05ed6677dec2eb19e731dc79463b0">&#9670;&nbsp;</a></span>setColor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NeoPixel::setColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ändere die Farbe einer LED. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Der Rotanteil der Farbe die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">g</td><td>Der Grünanteil der Farbe die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">b</td><td>Der Blauanteil der Farbe die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">pixel</td><td>Die Nummer der LED die die Farbe bekommen soll </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
 <li>/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-Modellbahn/include/<a class="el" href="_neo_pixel_8h_source.html">NeoPixel.h</a></li>
 </ul>

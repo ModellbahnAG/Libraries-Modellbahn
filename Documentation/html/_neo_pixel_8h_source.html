@@ -96,38 +96,48 @@ $(document).ready(function(){initNavTree('_neo_pixel_8h_source.html',''); initRe
 <div class="title">NeoPixel.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NEOPIXEL_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NEOPIXEL_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;FastLED.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_neo_pixel.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_neo_pixel.html">NeoPixel</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_neo_pixel.html">NeoPixel</a>(<span class="keywordtype">int</span> numPixel, <span class="keywordtype">byte</span> pin);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> fill(CRGB color, <span class="keywordtype">int</span> start = 0, <span class="keywordtype">int</span> end = numPixel - 1);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> fill(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> start = 0, <span class="keywordtype">int</span> end = numPixel - 1);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> setColor(<span class="keywordtype">int</span> pixel, CRGB color);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setColor(<span class="keywordtype">int</span> pixel, <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> off();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> pin;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> numPixel;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    CRGB leds[];</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_neo_pixel_html"><div class="ttname"><a href="class_neo_pixel.html">NeoPixel</a></div><div class="ttdef"><b>Definition:</b> NeoPixel.h:7</div></div>
+<a href="_neo_pixel_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef NEOPIXEL_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define NEOPIXEL_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;FastLED.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_neo_pixel.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_neo_pixel.html">NeoPixel</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_neo_pixel.html#a6ad2ee6bce11578331c17cdc9c6f9122">   38</a></span>&#160;    <a class="code" href="class_neo_pixel.html#a6ad2ee6bce11578331c17cdc9c6f9122">NeoPixel</a>(<span class="keywordtype">int</span> numPixel, <span class="keywordtype">int</span> pin);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413">   49</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413">fill</a>(CRGB color, <span class="keywordtype">int</span> start = 0, <span class="keywordtype">int</span> end = -1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_neo_pixel.html#a0a3f77bcb43b73e4b88b13446291317b">   61</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_neo_pixel.html#a0a3f77bcb43b73e4b88b13446291317b">fill</a>(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> start = 0, <span class="keywordtype">int</span> end = -1);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_neo_pixel.html#acd86a2fe450c8c6dcce8c993789135c2">   69</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_neo_pixel.html#acd86a2fe450c8c6dcce8c993789135c2">setColor</a>(CRGB color, <span class="keywordtype">int</span> pixel);</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">setColor</a>(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> pixel);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">off</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_neo_pixel.html#aca47a825b00115e8b1cd33793cd3a170">   90</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_neo_pixel.html#aca47a825b00115e8b1cd33793cd3a170">getNumberOfPixel</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> pin;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> numPixel;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    CRGBSet leds = CRGBSet(<span class="keyword">new</span> CRGB[0], 0);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_neo_pixel_html"><div class="ttname"><a href="class_neo_pixel.html">NeoPixel</a></div><div class="ttdoc">Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an...</div><div class="ttdef"><b>Definition:</b> NeoPixel.h:25</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_a0a3f77bcb43b73e4b88b13446291317b"><div class="ttname"><a href="class_neo_pixel.html#a0a3f77bcb43b73e4b88b13446291317b">NeoPixel::fill</a></div><div class="ttdeci">void fill(int r, int g, int b, int start=0, int end=-1)</div><div class="ttdoc">Ändere die Farbe aller LEDs in einem bestimmten Intervall.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_a5db05ed6677dec2eb19e731dc79463b0"><div class="ttname"><a href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">NeoPixel::setColor</a></div><div class="ttdeci">void setColor(int r, int g, int b, int pixel)</div><div class="ttdoc">Ändere die Farbe einer LED.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_a67e07318dc4aa8becf3edd3f75366413"><div class="ttname"><a href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413">NeoPixel::fill</a></div><div class="ttdeci">void fill(CRGB color, int start=0, int end=-1)</div><div class="ttdoc">Ändere die Farbe aller LEDs in einem bestimmten Intervall.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_a6ad2ee6bce11578331c17cdc9c6f9122"><div class="ttname"><a href="class_neo_pixel.html#a6ad2ee6bce11578331c17cdc9c6f9122">NeoPixel::NeoPixel</a></div><div class="ttdeci">NeoPixel(int numPixel, int pin)</div><div class="ttdoc">Erstelle einen LED strip mit einer festen Anzahl an LEDs und steuere diesen leicht an.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_aca47a825b00115e8b1cd33793cd3a170"><div class="ttname"><a href="class_neo_pixel.html#aca47a825b00115e8b1cd33793cd3a170">NeoPixel::getNumberOfPixel</a></div><div class="ttdeci">int getNumberOfPixel()</div><div class="ttdoc">Erhalte die Anzahl der LEDs im strip.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_acd86a2fe450c8c6dcce8c993789135c2"><div class="ttname"><a href="class_neo_pixel.html#acd86a2fe450c8c6dcce8c993789135c2">NeoPixel::setColor</a></div><div class="ttdeci">void setColor(CRGB color, int pixel)</div><div class="ttdoc">Ändere die Farbe einer LED.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_ae1b399d75b88295065e6846d3e0459c9"><div class="ttname"><a href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">NeoPixel::off</a></div><div class="ttdeci">void off()</div><div class="ttdoc">Schalte alle LEDs aus.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>NeoPixel.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_neo_pixel_8h.html">NeoPixel.h</a></li>
     <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
   </ul>
 </div>

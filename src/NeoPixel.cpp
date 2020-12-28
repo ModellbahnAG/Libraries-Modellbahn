@@ -22,7 +22,7 @@ NeoPixel::NeoPixel(int numPixel, int pin) {
 }
 
 void NeoPixel::fill(CRGB color, int start, int end) {
-  if (end < 0) { end = this->numPixel; }
+  if (end < 0 || end > this->numPixel) { end = this->numPixel; }
   for (int i = start; i < end; i++) {
     this->leds[i] = color;
   }
@@ -30,23 +30,27 @@ void NeoPixel::fill(CRGB color, int start, int end) {
 }
 
 void NeoPixel::fill(int r, int g, int b, int start, int end) {
-  if (end < 0) { end = this->numPixel; }
+  if (end < 0 || end > this->numPixel) { end = this->numPixel; }
   for (int i = start; i < end; i++) {
     this->leds[i].setRGB(r, g, b);
   }
   FastLED.show();
 }
 
-void NeoPixel::setColor(int pixel, CRGB color) {
+void NeoPixel::setColor(CRGB color, int pixel) {
   this->leds[pixel] = color;
   FastLED.show();
 }
 
-void NeoPixel::setColor(int pixel, int r, int g, int b) {
+void NeoPixel::setColor(int r, int g, int b, int pixel) {
   this->leds[pixel].setRGB(r, g, b);
   FastLED.show();
 }
 
 void NeoPixel::off() {
   this->fill(CRGB::Black);
+}
+
+int NeoPixel::getNumberOfPixel() {
+  return this->numPixel;
 }

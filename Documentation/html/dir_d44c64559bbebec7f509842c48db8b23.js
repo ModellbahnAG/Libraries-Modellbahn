@@ -6,5 +6,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "ButtonManager", "class_button_manager.html", null ]
     ] ],
     [ "Modellbahn.h", "_modellbahn_8h.html", null ],
-    [ "NeoPixel.h", "_neo_pixel_8h_source.html", null ]
+    [ "NeoPixel.h", "_neo_pixel_8h.html", [
+      [ "NeoPixel", "class_neo_pixel.html", "class_neo_pixel" ]
+    ] ]
 ];
