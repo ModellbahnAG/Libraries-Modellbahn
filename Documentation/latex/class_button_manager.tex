@@ -1,4 +1,4 @@
-\doxysection{Button\+Manager Klassenreferenz}
+\hypertarget{class_button_manager}{}\doxysection{Button\+Manager Klassenreferenz}
 \label{class_button_manager}\index{ButtonManager@{ButtonManager}}
 
 
@@ -12,10 +12,10 @@ Verwalte einfach mehrere Buttons in einem Programm.
 \doxysubsection*{Öffentliche, statische Methoden}
 \begin{DoxyCompactItemize}
 \item 
-static void \textbf{ add\+Button} (\textbf{ Button} $\ast$new\+Button)
-\begin{DoxyCompactList}\small\item\em Füge einen neuen \doxyref{Button}{S.}{class_button} hinzu der verwaltet werden soll. \end{DoxyCompactList}\item 
-static void \textbf{ handle\+Buttons} ()
-\begin{DoxyCompactList}\small\item\em Überprüfe, ob ein \doxyref{Button}{S.}{class_button} gedrückt wurde oder ob einer wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static void \mbox{\hyperlink{class_button_manager_abac14494a447472d4611f12f913d5260}{add\+Button}} (\mbox{\hyperlink{class_button}{Button}} $\ast$new\+Button)
+\begin{DoxyCompactList}\small\item\em Füge einen neuen \mbox{\hyperlink{class_button}{Button}} hinzu der verwaltet werden soll. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}{handle\+Buttons}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Ausführliche Beschreibung}
@@ -23,43 +23,35 @@ Verwalte einfach mehrere Buttons in einem Programm.
 
 Es werden keine Instanzen dieser Klasse erstellt 
 
-Definiert in Zeile 32 der Datei Button\+Manager.\+h.
-
-
-
 \doxysubsection{Dokumentation der Elementfunktionen}
-\mbox{\label{class_button_manager_abac14494a447472d4611f12f913d5260}} 
+\mbox{\Hypertarget{class_button_manager_abac14494a447472d4611f12f913d5260}\label{class_button_manager_abac14494a447472d4611f12f913d5260}} 
 \index{ButtonManager@{ButtonManager}!addButton@{addButton}}
 \index{addButton@{addButton}!ButtonManager@{ButtonManager}}
-\doxysubsubsection{addButton()}
-{\footnotesize\ttfamily static void Button\+Manager\+::add\+Button (\begin{DoxyParamCaption}\item[{\textbf{ Button} $\ast$}]{new\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\doxysubsubsection{\texorpdfstring{addButton()}{addButton()}}
+{\footnotesize\ttfamily static void Button\+Manager\+::add\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_button}{Button}} $\ast$}]{new\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Füge einen neuen \doxyref{Button}{S.}{class_button} hinzu der verwaltet werden soll. 
+Füge einen neuen \mbox{\hyperlink{class_button}{Button}} hinzu der verwaltet werden soll. 
 
 
 \begin{DoxyParams}{Parameter}
-{\em new\+Button} & Zeiger auf einen \doxyref{Button}{S.}{class_button} \\
+{\em new\+Button} & Zeiger auf einen \mbox{\hyperlink{class_button}{Button}} \\
 \hline
 \end{DoxyParams}
-\mbox{\label{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}} 
+\mbox{\Hypertarget{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}\label{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}} 
 \index{ButtonManager@{ButtonManager}!handleButtons@{handleButtons}}
 \index{handleButtons@{handleButtons}!ButtonManager@{ButtonManager}}
-\doxysubsubsection{handleButtons()}
+\doxysubsubsection{\texorpdfstring{handleButtons()}{handleButtons()}}
 {\footnotesize\ttfamily static void Button\+Manager\+::handle\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+\begin{DoxyVerb}@brief Überprüfe, ob ein Button gedrückt wurde oder ob einer wieder aktiviert
+werden kann. Diese Methode muss in der loop() aufgerufen werden
+\end{DoxyVerb}
 
 
-Überprüfe, ob ein \doxyref{Button}{S.}{class_button} gedrückt wurde oder ob einer wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. 
-
-
-\begin{DoxyParams}{Parameter}
-{\em keine} & \\
-\hline
-\end{DoxyParams}
-
+Wurde ein aktiver \mbox{\hyperlink{class_button}{Button}} gedrückt, wird die durch set\+Callback festgelegte Funktion ausgeführt. 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
 \item 
-include/\textbf{ Button\+Manager.\+h}\end{DoxyCompactItemize}
+/\+Users/dennis/\+Cloud\+Station/\+Schule/\+Modellbahn/\+Libraries-\/\+Modellbahn/include/\mbox{\hyperlink{_button_manager_8h}{Button\+Manager.\+h}}\end{DoxyCompactItemize}

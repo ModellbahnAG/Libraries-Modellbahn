@@ -6,10 +6,10 @@
 
 class NeoPixel {
   public:
-    NeoPixel(int numPixel, byte pin);
+    NeoPixel(int numPixel, int pin);
 
-    void fill(CRGB color, int start = 0, int end = numPixel - 1);
-    void fill(int r, int g, int b, int start = 0, int end = numPixel - 1);
+    void fill(CRGB color, int start = 0, int end = -1);
+    void fill(int r, int g, int b, int start = 0, int end = -1);
 
     void setColor(int pixel, CRGB color);
     void setColor(int pixel, int r, int g, int b);
@@ -17,9 +17,9 @@ class NeoPixel {
     void off();
 
   private:
-    const byte pin;
-    const int numPixel;
-    CRGB leds[];
+    int pin;
+    int numPixel;
+    CRGBSet leds = CRGBSet(new CRGB[0], 0);
 };
 
 #endif
