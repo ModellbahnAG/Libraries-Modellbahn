@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_button_manager" xml:lang="de">
+<title>ButtonManager Klassenreferenz</title>
+<indexterm><primary>ButtonManager</primary></indexterm>
+<simplesect>
+    <title>Öffentliche, statische Methoden    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_button_manager_1abac14494a447472d4611f12f913d5260"/>static void <emphasis role="strong">addButton</emphasis> (<link linkend="_class_button">Button</link> *newButton)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_button_manager_1a7ed76c846a1b745a5bb75d1af973fd83"/>static void <emphasis role="strong">handleButtons</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Statische öffentliche Attribute    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_button_manager_1afc4a25e87d514c11e63dd916bf73d22d"/>static <link linkend="_struct_button_list_item">ButtonListItem</link> * <emphasis role="strong">listHead</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:</para>
+include/ButtonManager.h</section>

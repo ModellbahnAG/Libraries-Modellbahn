@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_button" xml:lang="de">
+<title>Button Klassenreferenz</title>
+<indexterm><primary>Button</primary></indexterm>
+<simplesect>
+    <title>Öffentliche Methoden    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_button_1add707753d766c12eeb9265a456eabf9d">Button</link> (byte inputPin, byte lightPin, int delayTime=60)</para>
+
+<para>&lt;brief&gt; </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_button_1a3bcee333474dfe20a2f30cc0b4f9dbba"/>void <emphasis role="strong">init</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_button_1a94e937fe4ca79d079c168d72b215f780"/>void <emphasis role="strong">setCallback</emphasis> (const <link linkend="_structlambda__callback__t">lambda_callback_t</link> &amp;to)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_button_1a9d285e131ce246682d1dc2b0f9e5f3b7"/>void <emphasis role="strong">handleButton</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Beschreibung der Konstruktoren und Destruktoren</title>
+<anchor xml:id="_class_button_1add707753d766c12eeb9265a456eabf9d"/>    <section>
+    <title>Button()</title>
+<indexterm><primary>Button</primary><secondary>Button</secondary></indexterm>
+<indexterm><primary>Button</primary><secondary>Button</secondary></indexterm>
+<para><computeroutput>Button::Button (byte inputPin, byte lightPin, int delayTime = <computeroutput>60</computeroutput>
+)</computeroutput></para><para>
+
+<para>&lt;brief&gt; </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameter                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>&lt;name&gt;</entry>
+                                <entry>
+<para>&lt;parameter_description&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Rückgabe</title>
+
+<para>&lt;return_description&gt;</para>
+</formalpara>
+&lt;details&gt; </para>
+</section>
+<para>
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:</para>
+include/<link linkend="__button_8h">Button.h</link></section>
+</section>

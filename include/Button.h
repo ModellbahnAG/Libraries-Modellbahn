@@ -1,3 +1,12 @@
+/**
+* @file Button.h
+* @author Dennis Moschina
+* @date 28 Dec 2020
+* @copyright 2020 Dennis Moschina
+* @brief Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt
+* wurde deaktiviert wird
+*/
+
 #ifndef BUTTON_H
 #define BUTTON_H
 
@@ -109,35 +118,65 @@ struct lambda_callback_t {
 
 
 
+/**
+* @class Button
+* @brief Erstelle einen Button, der für eine bestimmte Zeit nachdem er
+* gedrückt wurde deaktiviert wird. Während der Button deaktiviert ist, ist sein
+* Licht ausgeschaltet und er reagiert nicht wenn er nochmals gedrückt wird.
 
+* @details Alle Instanzen müssen vor oder im setup erzeugt werden. In der loop
+* muss handleButton() ausgeführt werden. Bei der Verwendung von mehreren Buttons
+* wird die verwendung von ButtonManager empfohlen.
+*/
 class Button {
-  private:
-    byte inputPin;    // Pin des Tasters
-    byte lightPin;    // Pin des Lichts
-    int delayTime;    // Zeit, die der Taster deaktiviert ist (in Sekunden)
-
-    unsigned long lastPress = 0;   // Zeit, zu der der Taster zum letzten Mal gedrückt wurde
-    bool activated = true;
-
-    lambda_callback_t callback;
-
-		int buttonPressed();
-    void checkForTime();
-
   public:
+		/**
+		* @brief Erstelle eine Instanz der Klasse Button
+		*
+		* @param inputPin Pin, an den der Button angeschlossen ist
+		* @param lightPin Pin, an den das Licht des Buttons angeschlossen ist
+		* @param delayTime Zeit in Sekunden, die der Button nachdem er gedrückt
+		* wurde deaktiviert ist. Während dieser Zeit wird auch das Licht des Buttons
+		* deaktiviert. Der Standardwert ist 60
+		*
+		* @return Referenz zur Instanz von Button
+		*/
     Button(byte inputPin, byte lightPin, int delayTime = 60);
     ~Button() {
       callback.cleanup();
     }
-    void init();
 
-    // Der Nutzer übergibt hier eine lambda Funktion, die ausgeführt wird, sobald der Taster gedrückt wurde
-    void setCallback(const lambda_callback_t& to) {
-      this->callback.replace(to);
+		/**
+		* @brief Definiere eine Funktion, die ausgeführt wird, sobald der Button
+		* gedrückt wurde
+		* @param action Lampdafunktion die ausgeführt wird, sobald der Button gedrückt wurde
+		*/
+		void setCallback(const lambda_callback_t& action) {
+      this->callback.replace(action);
     }
 
+		/**
+		* @brief Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert
+		* werden kann. Diese Methode muss in der loop() aufgerufen werden
+		* @details Wurde ein aktiver Button gedrückt, wird die durch setCallback
+		* festgelegte Funktion ausgeführt.
+		*/
     void handleButton();
 
+	private:
+		byte inputPin;    // Pin des Buttons
+		byte lightPin;    // Pin des Lichts
+		int delayTime;    // Zeit, die der Button deaktiviert ist (in Sekunden)
+
+		unsigned long lastPress = 0;   // Zeit, zu der der Button zum letzten Mal gedrückt wurde
+		bool activated = true;
+
+		lambda_callback_t callback;
+
+		void init();
+
+		int buttonPressed();
+		void checkForTime();
 };
 
 #endif

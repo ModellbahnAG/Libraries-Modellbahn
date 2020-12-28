@@ -17,9 +17,8 @@ class NeoPixel {
     void off();
 
   private:
-    byte pin;
-
-    int numPixel;
+    const byte pin;
+    const int numPixel;
     CRGB leds[];
 };
 

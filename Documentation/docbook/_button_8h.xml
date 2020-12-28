@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__button_8h" xml:lang="de">
+<title>include/Button.h-Dateireferenz</title>
+<indexterm><primary>include/Button.h</primary></indexterm>
+<programlisting>#include &quot;Arduino.h&quot;
+#include &lt;Wire.h&gt;
+</programlisting><simplesect>
+    <title>Klassen    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_invocative">Invocative&lt; Resultant, Parametric &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structlambda__callback__t">lambda_callback_t</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_button">Button</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Makrodefinitionen    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__button_8h_1a4cfa7830ff16a6a1226be877f2085b6a"/>#define <emphasis role="strong">CALLBACK_TYPE_LIST</emphasis>   int</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funktionen    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__button_8h_1a9c8eda9b61c0157838309f6a8b2ab588"/>template&lt;typename Procedural , typename Resultant , typename... Parametric&gt; </para><para>Resultant <emphasis role="strong">InvokeProcedure</emphasis> (const void *locality, Parametric... arguments)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Ausführliche Beschreibung</title>
+
+<para>Erstelle einen <link linkend="_class_button">Button</link>, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird</para>
+
+<para><formalpara><title>Autor</title>
+
+<para>Dennis Moschina </para>
+</formalpara>
+<formalpara><title>Datum</title>
+
+<para>28 Dec 2020 </para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>2020 Dennis Moschina </para>
+</formalpara>
+</para>
+</section>
+</section>

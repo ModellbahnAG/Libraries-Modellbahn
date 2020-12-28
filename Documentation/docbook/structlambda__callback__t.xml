@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structlambda__callback__t" xml:lang="de">
+<title>lambda_callback_t Strukturreferenz</title>
+<indexterm><primary>lambda_callback_t</primary></indexterm>
+<simplesect>
+    <title>Öffentliche Typen    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1a1da51211d56878518689c563c14718b6"/>using <emphasis role="strong">invoke_t</emphasis> = <link linkend="_struct_invocative">Invocative</link>&lt; CALLBACK_TYPE_LIST &gt;</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1a07893d483053690818b7ba89ba65a5a9"/>using <emphasis role="strong">remover_t</emphasis> = void(void *)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Öffentliche Methoden    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1a8c0f0f3051f9c7d5afce02a2b1f406de"/><emphasis role="strong">lambda_callback_t</emphasis> (const <link linkend="_structlambda__callback__t">lambda_callback_t</link> &amp;copy)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1aef063d5927b5c3f3dfd23534880fbf9a"/>void <emphasis role="strong">replace</emphasis> (const <link linkend="_structlambda__callback__t">lambda_callback_t</link> &amp;with)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1abe48aababdb0ee0ba53afd63f32c1c9f"/>void <emphasis role="strong">cleanup</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Öffentliche Attribute    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1ac3929bebbc6929cbfa3d2855fabc3748"/><link linkend="_struct_invocative">invoke_t</link> <emphasis role="strong">invoke</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1ae45283cf28a895827f1310531df0a1d3"/>void * <emphasis role="strong">lambda</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structlambda__callback__t_1afa8f3461a3565198a096c5d9f10716c9"/>remover_t * <emphasis role="strong">remove</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:</para>
+include/<link linkend="__button_8h">Button.h</link></section>

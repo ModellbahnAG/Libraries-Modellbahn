@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_invocative" xml:lang="de">
+<title>Invocative&lt; Resultant, Parametric &gt; Template-Strukturreferenz</title>
+<indexterm><primary>Invocative&lt; Resultant, Parametric &gt;</primary></indexterm>
+<simplesect>
+    <title>Öffentliche Typen    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_invocative_1ae98187fec55fee9073d01b1f4989edda"/>using <emphasis role="strong">Interfacial</emphasis> = Resultant(const void *const, Parametric...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Öffentliche Methoden    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_invocative_1a98f28cac539f51cec3ded74b82fde0af"/>Resultant <emphasis role="strong">operator()</emphasis> (Parametric... arguments) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Öffentliche Attribute    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_invocative_1aaba83f42f03d1694dd25fe17bf776898"/>Interfacial * <emphasis role="strong">interface</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_invocative_1a98b9fb95b0c439d39090357c7dcaca95"/>const void * <emphasis role="strong">locality</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:</para>
+include/<link linkend="__button_8h">Button.h</link></section>

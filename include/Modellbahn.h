@@ -1,3 +1,13 @@
+/**
+* @file Modellbahn.h
+* @author Dennis Moschina
+* @date 28 Dec 2020
+* @copyright 2020 Dennis Moschina
+*
+* @brief Eine einfache Sammlung der Libraries. Es kann Modellbahn.h eingebunden
+* werden und es sind alle Libraries verwendbar.
+*/
+
 #ifndef MODELLBAHN_H
 #define MODELLBAHN_H
 
