@@ -38,13 +38,14 @@ class ButtonManager {
     */
     static void addButton(Button* newButton);
 
+
     /**
-		* @brief Überprüfe, ob ein Button gedrückt wurde oder ob einer wieder aktiviert
+    * @brief Überprüfe, ob ein Button gedrückt wurde oder ob einer wieder aktiviert
 		* werden kann. Diese Methode muss in der loop() aufgerufen werden
     *
     * @details Wurde ein aktiver Button gedrückt, wird die durch setCallback()
 		* festgelegte Funktion ausgeführt.
-		*/
+    */
     static void handleButtons();
 
   private:

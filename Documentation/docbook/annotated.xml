@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="de">
-<title>Auflistung der Klassen</title>
-Hier folgt die Aufzählung aller Klassen, Strukturen, Varianten und Schnittstellen mit einer Kurzbeschreibung:<link linkend="_class_button">Button</link><link linkend="_struct_button_list_item">ButtonListItem</link><link linkend="_class_button_manager">ButtonManager</link><link linkend="_struct_invocative">Invocative&lt; Resultant, Parametric &gt;</link><link linkend="_structlambda__callback__t">lambda_callback_t</link><link linkend="_class_neo_pixel">NeoPixel</link></section>

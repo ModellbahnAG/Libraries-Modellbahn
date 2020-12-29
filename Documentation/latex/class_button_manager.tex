@@ -15,7 +15,7 @@ Verwalte einfach mehrere Buttons in einem Programm.
 static void \mbox{\hyperlink{class_button_manager_abac14494a447472d4611f12f913d5260}{add\+Button}} (\mbox{\hyperlink{class_button}{Button}} $\ast$new\+Button)
 \begin{DoxyCompactList}\small\item\em Füge einen neuen \mbox{\hyperlink{class_button}{Button}} hinzu der verwaltet werden soll. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}{handle\+Buttons}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Überprüfe, ob ein \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob einer wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Ausführliche Beschreibung}
@@ -45,10 +45,9 @@ Füge einen neuen \mbox{\hyperlink{class_button}{Button}} hinzu der verwaltet we
 \doxysubsubsection{\texorpdfstring{handleButtons()}{handleButtons()}}
 {\footnotesize\ttfamily static void Button\+Manager\+::handle\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\begin{DoxyVerb}@brief Überprüfe, ob ein Button gedrückt wurde oder ob einer wieder aktiviert
-werden kann. Diese Methode muss in der loop() aufgerufen werden
-\end{DoxyVerb}
 
+
+Überprüfe, ob ein \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob einer wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. 
 
 Wurde ein aktiver \mbox{\hyperlink{class_button}{Button}} gedrückt, wird die durch set\+Callback() festgelegte Funktion ausgeführt. 
 
