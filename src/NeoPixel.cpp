@@ -47,10 +47,23 @@ void NeoPixel::setColor(int r, int g, int b, int pixel) {
   FastLED.show();
 }
 
+void NeoPixel::setBrightness(int brightness, int pixel) {
+  // brightness in das erlaubte Intervall [0, 255] bringen
+  brightness = min(brightness, 255);
+  brightness = max(brightness, 0);
+
+  if (pixel < 0) {
+    FastLED.setBrightness(brightness);
+  } else {
+    this->leds[pixel].maximizeBrightness();
+    this->leds[pixel].nscale8(brightness);
+  }
+}
+
 void NeoPixel::off() {
   this->fill(CRGB::Black);
 }
 
-int NeoPixel::getNumberOfPixel() {
+int NeoPixel::getNumberOfPixels() {
   return this->numPixel;
 }

@@ -78,6 +78,15 @@ class NeoPixel {
     void setColor(int r, int g, int b, int pixel);
 
     /**
+    * @brief Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig.
+    * @param brightness Die zu setzende Helligkeit. Liegt im Intervall [0, 255].
+    * Der Standardwert ist das Maximum von 255
+    * @param pixel Die Nummer der LED, die ihre Helligkeit ändern soll. Der
+    * Standardwert sind alle LEDs gleichzeitig
+    */
+    void setBrightness(int brightness = 255, int pixel = -1);
+
+    /**
     * @brief Schalte alle LEDs aus
     * @details Alle LEDs werden auf die Farbe Schwarz gesetzt
     */
@@ -87,7 +96,7 @@ class NeoPixel {
     * @brief Erhalte die Anzahl der LEDs im strip
     * @return Anzahl der LEDs im strip
     */
-    int getNumberOfPixel();
+    int getNumberOfPixels();
 
   private:
     int pin;

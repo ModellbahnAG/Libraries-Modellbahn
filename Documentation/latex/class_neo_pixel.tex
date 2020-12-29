@@ -22,9 +22,11 @@ void \mbox{\hyperlink{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}{set\+Co
 \begin{DoxyCompactList}\small\item\em Ändere die Farbe einer LED. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}{set\+Color}} (int r, int g, int b, int pixel)
 \begin{DoxyCompactList}\small\item\em Ändere die Farbe einer LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_ae088cc6a5f22401a4f56696d13a8cc69}{set\+Brightness}} (int brightness=255, int pixel=-\/1)
+\begin{DoxyCompactList}\small\item\em Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_neo_pixel_ae1b399d75b88295065e6846d3e0459c9}{off}} ()
 \begin{DoxyCompactList}\small\item\em Schalte alle LEDs aus. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_neo_pixel_aca47a825b00115e8b1cd33793cd3a170}{get\+Number\+Of\+Pixel}} ()
+int \mbox{\hyperlink{class_neo_pixel_a2baec551d5892662019a04f5943c8995}{get\+Number\+Of\+Pixels}} ()
 \begin{DoxyCompactList}\small\item\em Erhalte die Anzahl der LEDs im strip. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -103,11 +105,11 @@ Derzeit können nur die Pins 2 bis 13 verwendet werden!
 {\em end} & Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die Anzahl der LEDs im strip \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_neo_pixel_aca47a825b00115e8b1cd33793cd3a170}\label{class_neo_pixel_aca47a825b00115e8b1cd33793cd3a170}} 
-\index{NeoPixel@{NeoPixel}!getNumberOfPixel@{getNumberOfPixel}}
-\index{getNumberOfPixel@{getNumberOfPixel}!NeoPixel@{NeoPixel}}
-\doxysubsubsection{\texorpdfstring{getNumberOfPixel()}{getNumberOfPixel()}}
-{\footnotesize\ttfamily int Neo\+Pixel\+::get\+Number\+Of\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_neo_pixel_a2baec551d5892662019a04f5943c8995}\label{class_neo_pixel_a2baec551d5892662019a04f5943c8995}} 
+\index{NeoPixel@{NeoPixel}!getNumberOfPixels@{getNumberOfPixels}}
+\index{getNumberOfPixels@{getNumberOfPixels}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{getNumberOfPixels()}{getNumberOfPixels()}}
+{\footnotesize\ttfamily int Neo\+Pixel\+::get\+Number\+Of\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -126,7 +128,24 @@ Anzahl der LEDs im strip
 
 Schalte alle LEDs aus. 
 
-Alle LEDs werden auf die Farbe Schwarz gesetzt \mbox{\Hypertarget{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}\label{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}} 
+Alle LEDs werden auf die Farbe Schwarz gesetzt \mbox{\Hypertarget{class_neo_pixel_ae088cc6a5f22401a4f56696d13a8cc69}\label{class_neo_pixel_ae088cc6a5f22401a4f56696d13a8cc69}} 
+\index{NeoPixel@{NeoPixel}!setBrightness@{setBrightness}}
+\index{setBrightness@{setBrightness}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{setBrightness()}{setBrightness()}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::set\+Brightness (\begin{DoxyParamCaption}\item[{int}]{brightness = {\ttfamily 255},  }\item[{int}]{pixel = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em brightness} & Die zu setzende Helligkeit. Liegt im Intervall \mbox{[}0, 255\mbox{]}. Der Standardwert ist das Maximum von 255 \\
+\hline
+{\em pixel} & Die Nummer der LED, die ihre Helligkeit ändern soll. Der Standardwert sind alle LEDs gleichzeitig \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}\label{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}} 
 \index{NeoPixel@{NeoPixel}!setColor@{setColor}}
 \index{setColor@{setColor}!NeoPixel@{NeoPixel}}
 \doxysubsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}

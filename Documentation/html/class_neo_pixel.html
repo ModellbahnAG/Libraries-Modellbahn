@@ -122,12 +122,15 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <tr class="memitem:a5db05ed6677dec2eb19e731dc79463b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">setColor</a> (int r, int g, int b, int pixel)</td></tr>
 <tr class="memdesc:a5db05ed6677dec2eb19e731dc79463b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Farbe einer LED.  <a href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">Mehr ...</a><br /></td></tr>
 <tr class="separator:a5db05ed6677dec2eb19e731dc79463b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae088cc6a5f22401a4f56696d13a8cc69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#ae088cc6a5f22401a4f56696d13a8cc69">setBrightness</a> (int brightness=255, int pixel=-1)</td></tr>
+<tr class="memdesc:ae088cc6a5f22401a4f56696d13a8cc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig.  <a href="class_neo_pixel.html#ae088cc6a5f22401a4f56696d13a8cc69">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae088cc6a5f22401a4f56696d13a8cc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1b399d75b88295065e6846d3e0459c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">off</a> ()</td></tr>
 <tr class="memdesc:ae1b399d75b88295065e6846d3e0459c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schalte alle LEDs aus.  <a href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">Mehr ...</a><br /></td></tr>
 <tr class="separator:ae1b399d75b88295065e6846d3e0459c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca47a825b00115e8b1cd33793cd3a170"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#aca47a825b00115e8b1cd33793cd3a170">getNumberOfPixel</a> ()</td></tr>
-<tr class="memdesc:aca47a825b00115e8b1cd33793cd3a170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erhalte die Anzahl der LEDs im strip.  <a href="class_neo_pixel.html#aca47a825b00115e8b1cd33793cd3a170">Mehr ...</a><br /></td></tr>
-<tr class="separator:aca47a825b00115e8b1cd33793cd3a170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2baec551d5892662019a04f5943c8995"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#a2baec551d5892662019a04f5943c8995">getNumberOfPixels</a> ()</td></tr>
+<tr class="memdesc:a2baec551d5892662019a04f5943c8995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erhalte die Anzahl der LEDs im strip.  <a href="class_neo_pixel.html#a2baec551d5892662019a04f5943c8995">Mehr ...</a><br /></td></tr>
+<tr class="separator:a2baec551d5892662019a04f5943c8995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. </p>
@@ -276,14 +279,14 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 
 </div>
 </div>
-<a id="aca47a825b00115e8b1cd33793cd3a170"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca47a825b00115e8b1cd33793cd3a170">&#9670;&nbsp;</a></span>getNumberOfPixel()</h2>
+<a id="a2baec551d5892662019a04f5943c8995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2baec551d5892662019a04f5943c8995">&#9670;&nbsp;</a></span>getNumberOfPixels()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int NeoPixel::getNumberOfPixel </td>
+          <td class="memname">int NeoPixel::getNumberOfPixels </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -313,6 +316,43 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 
 <p>Schalte alle LEDs aus. </p>
 <p>Alle LEDs werden auf die Farbe Schwarz gesetzt </p>
+
+</div>
+</div>
+<a id="ae088cc6a5f22401a4f56696d13a8cc69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae088cc6a5f22401a4f56696d13a8cc69">&#9670;&nbsp;</a></span>setBrightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NeoPixel::setBrightness </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>brightness</em> = <code>255</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixel</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brightness</td><td>Die zu setzende Helligkeit. Liegt im Intervall [0, 255]. Der Standardwert ist das Maximum von 255 </td></tr>
+    <tr><td class="paramname">pixel</td><td>Die Nummer der LED, die ihre Helligkeit ändern soll. Der Standardwert sind alle LEDs gleichzeitig </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
