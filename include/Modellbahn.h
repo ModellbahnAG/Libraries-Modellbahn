@@ -14,5 +14,6 @@
 #include "ButtonManager.h"
 #include "Button.h"
 #include "NeoPixel.h"
+#include "LightEffects.h"
 
 #endif
