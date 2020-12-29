@@ -141,7 +141,7 @@ class Button {
 		*
 		* @return Referenz zur Instanz von Button
 		*/
-    Button(byte inputPin, byte lightPin, int delayTime = 60);
+    Button(byte inputPin, byte lightPin, unsigned long delayTime = 60);
     ~Button() {
       callback.cleanup();
     }
@@ -166,7 +166,7 @@ class Button {
 	private:
 		byte inputPin;    // Pin des Buttons
 		byte lightPin;    // Pin des Lichts
-		int delayTime;    // Zeit, die der Button deaktiviert ist (in Sekunden)
+		unsigned long delayTime;    // Zeit, die der Button deaktiviert ist (in Sekunden)
 
 		unsigned long lastPress = 0;   // Zeit, zu der der Button zum letzten Mal gedrückt wurde
 		bool activated = true;

@@ -2,7 +2,7 @@
 
 
 
-Button::Button(byte inputPin, byte lightPin, int delayTime = 60) {
+Button::Button(byte inputPin, byte lightPin, unsigned long delayTime) {
   this->inputPin = inputPin;
   this->lightPin = lightPin;
   this->delayTime = delayTime;
@@ -14,13 +14,11 @@ void Button::init() {
   pinMode(inputPin, INPUT_PULLUP);
   pinMode(lightPin, OUTPUT);
 
-  digitalWrite(lightPin, LOW);
+  digitalWrite(lightPin, HIGH);
 }
 
 int Button::buttonPressed() {
-  Serial.print("b");
   if (this->activated) {
-    Serial.println("is activated");
     this->lastPress = millis();
 
     this->activated = false;
@@ -31,7 +29,7 @@ int Button::buttonPressed() {
 }
 
 void Button::checkForTime() {
-  if (millis() >= this->lastPress + delayTime * 1000) {
+  if (millis() >= this->lastPress + (delayTime * 1000)) {
     this->activated = true;
     digitalWrite(lightPin, HIGH);
   }
@@ -40,6 +38,6 @@ void Button::checkForTime() {
 void Button::handleButton() {
   checkForTime();
   if (!digitalRead(this->inputPin)) {
-    Serial.println(buttonPressed());
+    buttonPressed();
   }
 }
