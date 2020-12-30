@@ -1,0 +1,45 @@
+\hypertarget{_button_manager_example_8cpp-example}{}\doxysection{Button\+Manager\+Example.\+cpp}
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_modellbahn_8h}{Modellbahn.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define ON\_BUTTON\_PIN 9        }\textcolor{comment}{// Pin an den der Button angeschlossen ist}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define ON\_BUTTON\_LIGHT\_PIN 10 }\textcolor{comment}{// Pin an den das Licht des Buttons angeschlossen ist}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define OFF\_BUTTON\_PIN 11}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define OFF\_BUTTON\_LIGHT\_PIN 12}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} led = 13;   \textcolor{comment}{// Pin der LED in unserem Beispiel}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Es werden neue Buttons erzeugt}}
+\DoxyCodeLine{\mbox{\hyperlink{class_button}{Button}} onButton = \mbox{\hyperlink{class_button}{Button}}(ON\_BUTTON\_PIN, ON\_BUTTON\_LIGHT\_PIN, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_button}{Button}} offButton = \mbox{\hyperlink{class_button}{Button}}(OFF\_BUTTON\_PIN, OFF\_BUTTON\_LIGHT\_PIN, 0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} setup() \{}
+\DoxyCodeLine{  pinMode(led, OUTPUT);}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{comment}{/*}}
+\DoxyCodeLine{\textcolor{comment}{   * Sobald der Button gedrückt wird, wird der hier angegebene Code ausgeführt.}}
+\DoxyCodeLine{\textcolor{comment}{   */}}
+\DoxyCodeLine{  onButton.\mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{setCallback}}(CallLambda([] () \{}
+\DoxyCodeLine{    digitalWrite(led, HIGH);}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{  \}));}
+\DoxyCodeLine{  offButton.\mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{setCallback}}(CallLambda([] () \{}
+\DoxyCodeLine{    digitalWrite(led, LOW);}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{  \}));}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} loop() \{}
+\DoxyCodeLine{  \textcolor{comment}{/*}}
+\DoxyCodeLine{\textcolor{comment}{   * Der ButtonManager überprüft, ob ein deaktivierter Button wieder aktiviert}}
+\DoxyCodeLine{\textcolor{comment}{   * werden kann.}}
+\DoxyCodeLine{\textcolor{comment}{   */}}
+\DoxyCodeLine{  \mbox{\hyperlink{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}{ButtonManager::handleButtons}}();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

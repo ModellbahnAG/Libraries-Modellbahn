@@ -36,7 +36,8 @@ var NAVTREE =
     ] ],
     [ "Dateien", "files.html", [
       [ "Auflistung der Dateien", "files.html", "files_dup" ]
-    ] ]
+    ] ],
+    [ "Beispiele", "examples.html", "examples" ]
   ] ]
 ];
 

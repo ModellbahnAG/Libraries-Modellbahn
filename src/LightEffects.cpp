@@ -9,10 +9,10 @@
 
 #include "LightEffects.h"
 
-void LightEffects::flash(NeoPixel* led) {
+void LightEffects::flash(NeoPixel* led, int duration) {
   unsigned long startTime = millis();
 
-  while(millis() < startTime + 1000) {
+  while(millis() < startTime + (duration * 1000)) {
     int pixel = random(0, led->getNumberOfPixels());
 
     led->setColor(255,200,255, pixel);
@@ -25,10 +25,15 @@ void LightEffects::flash(NeoPixel* led) {
   }
 }
 
-void LightEffects::torch(NeoPixel *led) {
-  led->fill(255, 50, 0);
-  int pixel = random(0, led->getNumberOfPixels());
-  led->setBrightness(100, pixel);
-  delay(random(10, 100));
-  led->setBrightness(255, pixel);
+void LightEffects::torch(NeoPixel *led, int duration) {
+  unsigned long startTime = millis();
+
+  while(millis() < startTime + (duration * 1000)) {
+    led->fill(255, 50, 0);
+    int pixel = random(0, led->getNumberOfPixels());
+    led->setBrightness(100, pixel);
+    delay(random(10, 100));
+    led->setBrightness(255, pixel);
+  }
+  led->off();
 }

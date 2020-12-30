@@ -208,40 +208,40 @@ $(document).ready(function(){initNavTree('_button_8h_source.html',''); initResiz
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_button.html">  131</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_button.html">Button</a> {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_button.html#add707753d766c12eeb9265a456eabf9d">  144</a></span>&#160;    <a class="code" href="class_button.html#add707753d766c12eeb9265a456eabf9d">Button</a>(<span class="keywordtype">byte</span> inputPin, <span class="keywordtype">byte</span> lightPin, <span class="keywordtype">int</span> delayTime = 60);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    ~<a class="code" href="class_button.html">Button</a>() {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      callback.cleanup();</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">  154</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">setCallback</a>(<span class="keyword">const</span> <a class="code" href="structlambda__callback__t.html">lambda_callback_t</a>&amp; action) {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      this-&gt;callback.replace(action);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7">  164</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7">handleButton</a>();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">byte</span> inputPin;    <span class="comment">// Pin des Buttons</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordtype">byte</span> lightPin;    <span class="comment">// Pin des Lichts</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">int</span> delayTime;    <span class="comment">// Zeit, die der Button deaktiviert ist (in Sekunden)</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastPress = 0;   <span class="comment">// Zeit, zu der der Button zum letzten Mal gedrückt wurde</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">bool</span> activated = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_button.html">  133</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_button.html">Button</a> {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_button.html#a9ba43424a686758b870554d19064fb83">  146</a></span>&#160;    <a class="code" href="class_button.html#a9ba43424a686758b870554d19064fb83">Button</a>(<span class="keywordtype">byte</span> inputPin, <span class="keywordtype">byte</span> lightPin, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> delayTime = 60);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    ~<a class="code" href="class_button.html">Button</a>() {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      callback.cleanup();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">  157</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">setCallback</a>(<span class="keyword">const</span> <a class="code" href="structlambda__callback__t.html">lambda_callback_t</a>&amp; action) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      this-&gt;callback.replace(action);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7">  167</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7">handleButton</a>();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">byte</span> inputPin;    <span class="comment">// Pin des Buttons</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">byte</span> lightPin;    <span class="comment">// Pin des Lichts</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> delayTime;    <span class="comment">// Zeit, die der Button deaktiviert ist (in Sekunden)</span></div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="structlambda__callback__t.html">lambda_callback_t</a> callback;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">void</span> init();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordtype">int</span> buttonPressed();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">void</span> checkForTime();</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_button_html"><div class="ttname"><a href="class_button.html">Button</a></div><div class="ttdoc">Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....</div><div class="ttdef"><b>Definition:</b> Button.h:131</div></div>
-<div class="ttc" id="aclass_button_html_a54a2b43509e6c28ba8b0a4c003ded6ba"><div class="ttname"><a href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">Button::setCallback</a></div><div class="ttdeci">void setCallback(const lambda_callback_t &amp;action)</div><div class="ttdoc">Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.</div><div class="ttdef"><b>Definition:</b> Button.h:154</div></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastPress = 0;   <span class="comment">// Zeit, zu der der Button zum letzten Mal gedrückt wurde</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">bool</span> activated = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="structlambda__callback__t.html">lambda_callback_t</a> callback;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">void</span> init();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordtype">int</span> buttonPressed();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">void</span> checkForTime();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_button_html"><div class="ttname"><a href="class_button.html">Button</a></div><div class="ttdoc">Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....</div><div class="ttdef"><b>Definition:</b> Button.h:133</div></div>
+<div class="ttc" id="aclass_button_html_a54a2b43509e6c28ba8b0a4c003ded6ba"><div class="ttname"><a href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">Button::setCallback</a></div><div class="ttdeci">void setCallback(const lambda_callback_t &amp;action)</div><div class="ttdoc">Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.</div><div class="ttdef"><b>Definition:</b> Button.h:157</div></div>
+<div class="ttc" id="aclass_button_html_a9ba43424a686758b870554d19064fb83"><div class="ttname"><a href="class_button.html#a9ba43424a686758b870554d19064fb83">Button::Button</a></div><div class="ttdeci">Button(byte inputPin, byte lightPin, unsigned long delayTime=60)</div><div class="ttdoc">Erstelle eine Instanz der Klasse Button.</div></div>
 <div class="ttc" id="aclass_button_html_a9d285e131ce246682d1dc2b0f9e5f3b7"><div class="ttname"><a href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7">Button::handleButton</a></div><div class="ttdeci">void handleButton()</div><div class="ttdoc">Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss i...</div></div>
-<div class="ttc" id="aclass_button_html_add707753d766c12eeb9265a456eabf9d"><div class="ttname"><a href="class_button.html#add707753d766c12eeb9265a456eabf9d">Button::Button</a></div><div class="ttdeci">Button(byte inputPin, byte lightPin, int delayTime=60)</div><div class="ttdoc">Erstelle eine Instanz der Klasse Button.</div></div>
 <div class="ttc" id="astruct_invocative_html"><div class="ttname"><a href="struct_invocative.html">Invocative</a></div><div class="ttdef"><b>Definition:</b> Button.h:25</div></div>
 <div class="ttc" id="astructlambda__callback__t_html"><div class="ttname"><a href="structlambda__callback__t.html">lambda_callback_t</a></div><div class="ttdef"><b>Definition:</b> Button.h:64</div></div>
 </div><!-- fragment --></div><!-- contents -->

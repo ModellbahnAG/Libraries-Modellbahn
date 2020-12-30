@@ -107,9 +107,9 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
-<tr class="memitem:add707753d766c12eeb9265a456eabf9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#add707753d766c12eeb9265a456eabf9d">Button</a> (byte inputPin, byte lightPin, int delayTime=60)</td></tr>
-<tr class="memdesc:add707753d766c12eeb9265a456eabf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstelle eine Instanz der Klasse <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a>.  <a href="class_button.html#add707753d766c12eeb9265a456eabf9d">Mehr ...</a><br /></td></tr>
-<tr class="separator:add707753d766c12eeb9265a456eabf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba43424a686758b870554d19064fb83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#a9ba43424a686758b870554d19064fb83">Button</a> (byte inputPin, byte lightPin, unsigned long delayTime=60)</td></tr>
+<tr class="memdesc:a9ba43424a686758b870554d19064fb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstelle eine Instanz der Klasse <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a>.  <a href="class_button.html#a9ba43424a686758b870554d19064fb83">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9ba43424a686758b870554d19064fb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54a2b43509e6c28ba8b0a4c003ded6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">setCallback</a> (const <a class="el" href="structlambda__callback__t.html">lambda_callback_t</a> &amp;action)</td></tr>
 <tr class="memdesc:a54a2b43509e6c28ba8b0a4c003ded6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definiere eine Funktion, die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde.  <a href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">Mehr ...</a><br /></td></tr>
 <tr class="separator:a54a2b43509e6c28ba8b0a4c003ded6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,10 +119,12 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p>Erstelle einen <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a>, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird. Während der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> deaktiviert ist, ist sein Licht ausgeschaltet und er reagiert nicht wenn er nochmals gedrückt wird. </p>
-<p>Alle Instanzen müssen vor oder im setup erzeugt werden. In der loop muss <a class="el" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7" title="Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss i...">handleButton()</a> ausgeführt werden. Bei der Verwendung von mehreren Buttons wird die verwendung von <a class="el" href="class_button_manager.html" title="Verwalte einfach mehrere Buttons in einem Programm.">ButtonManager</a> empfohlen. </p>
+<p>Alle Instanzen müssen vor oder im setup erzeugt werden. In der loop muss <a class="el" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7" title="Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss i...">handleButton()</a> ausgeführt werden. Bei der Verwendung von mehreren Buttons wird die Verwendung von <a class="el" href="class_button_manager.html" title="Verwalte einfach mehrere Buttons in einem Programm.">ButtonManager</a> empfohlen. </p>
+<dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_button_example_8cpp-example.html#_a0">ButtonExample.cpp</a> und <a class="el" href="_button_manager_example_8cpp-example.html#_a0">ButtonManagerExample.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
-<a id="add707753d766c12eeb9265a456eabf9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add707753d766c12eeb9265a456eabf9d">&#9670;&nbsp;</a></span>Button()</h2>
+<a id="a9ba43424a686758b870554d19064fb83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba43424a686758b870554d19064fb83">&#9670;&nbsp;</a></span>Button()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +144,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned long&#160;</td>
           <td class="paramname"><em>delayTime</em> = <code>60</code>&#160;</td>
         </tr>
         <tr>
@@ -183,7 +185,9 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 </div><div class="memdoc">
 
 <p>Überprüfe, ob der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. </p>
-<p>Wurde ein aktiver <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt, wird die durch setCallback festgelegte Funktion ausgeführt. </p>
+<p>Wurde <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt und ist aktiv, wird die durch <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">setCallback()</a> festgelegte Funktion ausgeführt. </p>
+<dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_button_example_8cpp-example.html#a2">ButtonExample.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -214,9 +218,11 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 <p>Definiere eine Funktion, die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">action</td><td>Lampdafunktion die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde </td></tr>
+    <tr><td class="paramname">action</td><td>Lampdafunktion die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde. Am Ende muss 0 zurückgegeben werden. </td></tr>
   </table>
   </dd>
+</dl>
+<dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_button_example_8cpp-example.html#a1">ButtonExample.cpp</a> und <a class="el" href="_button_manager_example_8cpp-example.html#a1">ButtonManagerExample.cpp</a>.</dd>
 </dl>
 
 </div>

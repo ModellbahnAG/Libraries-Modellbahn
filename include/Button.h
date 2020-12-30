@@ -126,7 +126,9 @@ struct lambda_callback_t {
 
 * @details Alle Instanzen müssen vor oder im setup erzeugt werden. In der loop
 * muss handleButton() ausgeführt werden. Bei der Verwendung von mehreren Buttons
-* wird die verwendung von ButtonManager empfohlen.
+* wird die Verwendung von ButtonManager empfohlen.
+*
+* @example ButtonExample.cpp
 */
 class Button {
   public:
@@ -149,7 +151,8 @@ class Button {
 		/**
 		* @brief Definiere eine Funktion, die ausgeführt wird, sobald der Button
 		* gedrückt wurde
-		* @param action Lampdafunktion die ausgeführt wird, sobald der Button gedrückt wurde
+		* @param action Lampdafunktion die ausgeführt wird, sobald der Button
+		* gedrückt wurde. Am Ende muss 0 zurückgegeben werden.
 		*/
 		void setCallback(const lambda_callback_t& action) {
       this->callback.replace(action);
@@ -158,7 +161,7 @@ class Button {
 		/**
 		* @brief Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert
 		* werden kann. Diese Methode muss in der loop() aufgerufen werden
-		* @details Wurde ein aktiver Button gedrückt, wird die durch setCallback
+		* @details Wurde Button gedrückt und ist aktiv, wird die durch setCallback()
 		* festgelegte Funktion ausgeführt.
 		*/
     void handleButton();

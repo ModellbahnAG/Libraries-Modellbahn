@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['torch_52',['torch',['../class_light_effects.html#a076b519f88b343ef9b1f3881fc756766',1,'LightEffects']]]
+  ['torch_52',['torch',['../class_light_effects.html#add1b8dbda9e3801f004a53c5dd85befd',1,'LightEffects']]]
 ];

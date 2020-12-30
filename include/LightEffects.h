@@ -23,28 +23,34 @@
 class LightEffects {
   public:
     /**
-    * @brief Simuliere einen Blitz.
+    * @brief Simuliere einen Blitz für eine bestimmte Zeit.
     *
     * @param led ein Zeiger auf die vorher erstellte Instanz von NeoPixel
+    * @param duration die Zeit, die der Blitz dauern soll in Sekunden. Der
+    * Standardwert ist eine Sekunde.
     *
     * @details Der Blitz kann sowohl für Gewitter, als auch für Explosionen
     * eingesetzt werden.
     */
-    static void flash(NeoPixel* led);
+    static void flash(NeoPixel* led, int duration = 1);
 
     /**
-    * @brief Simuliere eine Fackel.
+    * @brief Simuliere eine Fackel. Für eine bestimmte Zeit.
     *
     * @param led ein Zeiger auf die vorher erstellte Instanz von NeoPixel
+    * @param duration die Zeit, die die Fackeln leuchten sollen in Sekunden. Der
+    * Standardwert ist 10 Sekunden.
     */
-    static void torch(NeoPixel* led);
+    static void torch(NeoPixel* led, int duration = 10);
 
     /**
-    * @brief Simuliere ein Feuer.
+    * @brief Simuliere ein Feuer für eine bestimmte Zeit.
     *
     * @param led ein Zeiger auf die vorher erstellte Instanz von NeoPixel
+    * @param duration die Zeit, die das Feuer brennen soll in Sekunden. Der
+    * Standardwert ist 10 Sekunden.
     */
-    static void fire(NeoPixel* led);
+    static void fire(NeoPixel* led, int duration = 10);
 };
 
 #endif

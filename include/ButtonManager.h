@@ -27,7 +27,9 @@ struct ButtonListItem {
 * @class ButtonManager
 * @brief Verwalte einfach mehrere Buttons in einem Programm.
 *
-* @details Es werden keine Instanzen dieser Klasse erstellt
+* @details Es werden keine Instanzen dieser Klasse erstellt.
+*
+* @example ButtonManagerExample.cpp
 */
 class ButtonManager {
   public:
@@ -43,7 +45,7 @@ class ButtonManager {
     * @brief Überprüfe, ob ein Button gedrückt wurde oder ob einer wieder aktiviert
 		* werden kann. Diese Methode muss in der loop() aufgerufen werden
     *
-    * @details Wurde ein aktiver Button gedrückt, wird die durch setCallback()
+    * @details Wurde ein aktiver Button gedrückt, wird die durch Button::setCallback()
 		* festgelegte Funktion ausgeführt.
     */
     static void handleButtons();

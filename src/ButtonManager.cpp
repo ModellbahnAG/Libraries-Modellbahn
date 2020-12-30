@@ -4,7 +4,7 @@ ButtonListItem* ButtonManager::listHead = NULL;
 
 
 
-void ButtonManager::addButton(Button *newButton) {
+void ButtonManager::addButton(Button* newButton) {
   ButtonListItem* link = new ButtonListItem;
 
   link->button = newButton;
@@ -16,7 +16,7 @@ void ButtonManager::addButton(Button *newButton) {
 void ButtonManager::handleButtons() {
   ButtonListItem* buttonPtr = ButtonManager::listHead;
 
-  while (buttonPtr != NULL) {
+  while (buttonPtr != nullptr) {
     buttonPtr->button->handleButton();
     buttonPtr = buttonPtr->next;
   }

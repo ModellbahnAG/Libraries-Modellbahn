@@ -11,10 +11,10 @@ Button::Button(byte inputPin, byte lightPin, unsigned long delayTime) {
 }
 
 void Button::init() {
-  pinMode(inputPin, INPUT_PULLUP);
-  pinMode(lightPin, OUTPUT);
+  pinMode(this->inputPin, INPUT_PULLUP);
+  pinMode(this->lightPin, OUTPUT);
 
-  digitalWrite(lightPin, HIGH);
+  digitalWrite(this->lightPin, HIGH);
 }
 
 int Button::buttonPressed() {
@@ -24,14 +24,14 @@ int Button::buttonPressed() {
     this->activated = false;
     digitalWrite(lightPin, LOW);
 
-    return callback.invoke();
+    return this->callback.invoke();
   }
 }
 
 void Button::checkForTime() {
-  if (millis() >= this->lastPress + (delayTime * 1000)) {
+  if (millis() >= this->lastPress + (this->delayTime * 1000)) {
     this->activated = true;
-    digitalWrite(lightPin, HIGH);
+    digitalWrite(this->lightPin, HIGH);
   }
 }
 

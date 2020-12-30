@@ -19,8 +19,6 @@
 * @details Diese Klasse implementiert nur die grundlegensten Funktionen. Für
 * alles aufwendigeres wird empfohlen die FastLED Bibliothek direkt zu verwenden.
 * Derzeit können nur die Pins 2 bis 13 verwendet werden!
-*
-* @todo Weitere Pins verfügbar machen
 */
 class NeoPixel {
   public:
@@ -34,6 +32,7 @@ class NeoPixel {
     * @return Referenz zur Instanz von NeoPixel
     *
     * @details Derzeit können nur die Pins 2 bis 13 verwendet werden!
+    * @todo Weitere Pins verfügbar machen
     */
     NeoPixel(int numPixel, int pin);
 
@@ -101,7 +100,7 @@ class NeoPixel {
   private:
     int pin;
     int numPixel;
-    CRGBSet leds = CRGBSet(new CRGB[0], 0);
+    CRGBSet leds = CRGBSet(nullptr, 0);
 };
 
 #endif
