@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Modellbahn: NeoPixelExample.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Modellbahn
+   </div>
+   <div id="projectbrief">Libraries für verschiedene Funktionen in der ModellbahnAG</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_neo_pixel_example_8cpp-example.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">NeoPixelExample.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_modellbahn_8h.html">Modellbahn.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define NUM_PIXEL 12</span></div>
+<div class="line"><span class="preprocessor">#define LED_PIN 8</span></div>
+<div class="line"> </div>
+<div class="line"><a name="_a0"></a><a class="code" href="class_neo_pixel.html">NeoPixel</a> pixels = <a class="code" href="class_neo_pixel.html">NeoPixel</a>(NUM_PIXEL, LED_PIN);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  pixels.<a name="a1"></a><a class="code" href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413">fill</a>(0,255,0);         <span class="comment">//alle Pixel werden mit voller Helligkeit auf grün gesetzt</span></div>
+<div class="line">  pixels.<a name="a2"></a><a class="code" href="class_neo_pixel.html#ae088cc6a5f22401a4f56696d13a8cc69">setBrightness</a>(50);     <span class="comment">//die Helligkeit der Pixel wird von 255 auf 50 gesetzt</span></div>
+<div class="line">  delay(1000);                  <span class="comment">//der Arduino wartet 1000 Millisekunden</span></div>
+<div class="line">  pixels.<a name="a3"></a><a class="code" href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">off</a>();                 <span class="comment">//alle Pixel werden ausgeschalten</span></div>
+<div class="line"> </div>
+<div class="line">  delay(500);</div>
+<div class="line"> </div>
+<div class="line">  pixels.<a name="a4"></a><a class="code" href="class_neo_pixel.html#acd86a2fe450c8c6dcce8c993789135c2">setColor</a>(255,0,0,0);   <span class="comment">//der Pixel Nummer null wird mit voller Helligkeit auf rot gesetzt</span></div>
+<div class="line">  delay(1000);                  <span class="comment">//der Arduino wartet 1000 Millisekunden</span></div>
+<div class="line">}</div>
+<div class="ttc" id="a_modellbahn_8h_html"><div class="ttname"><a href="_modellbahn_8h.html">Modellbahn.h</a></div><div class="ttdoc">Eine einfache Sammlung der Libraries. Es kann Modellbahn.h eingebunden werden und es sind alle Librar...</div></div>
+<div class="ttc" id="aclass_neo_pixel_html"><div class="ttname"><a href="class_neo_pixel.html">NeoPixel</a></div><div class="ttdoc">Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an...</div><div class="ttdef"><b>Definition:</b> NeoPixel.h:25</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_a67e07318dc4aa8becf3edd3f75366413"><div class="ttname"><a href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413">NeoPixel::fill</a></div><div class="ttdeci">void fill(CRGB color, int start=0, int end=-1)</div><div class="ttdoc">Ändere die Farbe aller LEDs in einem bestimmten Intervall.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_acd86a2fe450c8c6dcce8c993789135c2"><div class="ttname"><a href="class_neo_pixel.html#acd86a2fe450c8c6dcce8c993789135c2">NeoPixel::setColor</a></div><div class="ttdeci">void setColor(CRGB color, int pixel)</div><div class="ttdoc">Ändere die Farbe einer LED.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_ae088cc6a5f22401a4f56696d13a8cc69"><div class="ttname"><a href="class_neo_pixel.html#ae088cc6a5f22401a4f56696d13a8cc69">NeoPixel::setBrightness</a></div><div class="ttdeci">void setBrightness(int brightness=255, int pixel=-1)</div><div class="ttdoc">Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig.</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_ae1b399d75b88295065e6846d3e0459c9"><div class="ttname"><a href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">NeoPixel::off</a></div><div class="ttdeci">void off()</div><div class="ttdoc">Schalte alle LEDs aus.</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

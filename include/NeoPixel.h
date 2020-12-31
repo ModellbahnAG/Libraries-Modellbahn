@@ -19,6 +19,8 @@
 * @details Diese Klasse implementiert nur die grundlegensten Funktionen. Für
 * alles aufwendigeres wird empfohlen die FastLED Bibliothek direkt zu verwenden.
 * Derzeit können nur die Pins 2 bis 13 verwendet werden!
+*
+* @example NeoPixelExample.cpp
 */
 class NeoPixel {
   public:
