@@ -55,6 +55,7 @@ void NeoPixel::setBrightness(int brightness, int pixel) {
     this->leds[pixel].maximizeBrightness();
     this->leds[pixel].nscale8(brightness);
   }
+  FastLED.show();
 }
 
 void NeoPixel::off() {
