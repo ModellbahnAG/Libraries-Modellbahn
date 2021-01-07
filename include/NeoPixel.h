@@ -102,7 +102,7 @@ class NeoPixel {
   private:
     int pin;
     int numPixel;
-    CRGBSet leds = CRGBSet(nullptr, 0);
+    CRGBSet leds = CRGBSet(new CRGB[0], 0);
 };
 
 #endif

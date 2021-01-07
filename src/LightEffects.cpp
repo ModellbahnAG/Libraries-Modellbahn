@@ -18,7 +18,6 @@ void LightEffects::flash(NeoPixel* led, int duration) {
     led->setColor(255,200,255, pixel);
 
     int delayTime = random(10, 100);
-    Serial.println(delayTime);
     delay(delayTime);
 
     led->off();

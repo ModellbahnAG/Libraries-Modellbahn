@@ -23,17 +23,13 @@ NeoPixel::NeoPixel(int numPixel, int pin) {
 
 void NeoPixel::fill(CRGB color, int start, int end) {
   if (end < 0 || end > this->numPixel) { end = this->numPixel; }
-  for (int i = start; i < end; i++) {
-    this->leds[i] = color;
-  }
+  this->leds(start, end) = color;
   FastLED.show();
 }
 
 void NeoPixel::fill(int r, int g, int b, int start, int end) {
   if (end < 0 || end > this->numPixel) { end = this->numPixel; }
-  for (int i = start; i < end; i++) {
-    this->leds[i].setRGB(r, g, b);
-  }
+  this->leds(start, end) = CRGB(r, g, b);
   FastLED.show();
 }
 
@@ -53,7 +49,8 @@ void NeoPixel::setBrightness(int brightness, int pixel) {
   brightness = max(brightness, 0);
 
   if (pixel < 0) {
-    FastLED.setBrightness(brightness);
+    FastLED.setBrightness(255);
+    this->leds(0, this->numPixel).nscale8(brightness);
   } else {
     this->leds[pixel].maximizeBrightness();
     this->leds[pixel].nscale8(brightness);
