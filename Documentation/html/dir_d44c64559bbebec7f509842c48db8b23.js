@@ -1,6 +1,8 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
-    [ "Button.h", "_button_8h.html", "_button_8h" ],
+    [ "Button.h", "_button_8h.html", [
+      [ "Button", "class_button.html", "class_button" ]
+    ] ],
     [ "ButtonManager.h", "_button_manager_8h.html", [
       [ "ButtonListItem", "struct_button_list_item.html", "struct_button_list_item" ],
       [ "ButtonManager", "class_button_manager.html", null ]

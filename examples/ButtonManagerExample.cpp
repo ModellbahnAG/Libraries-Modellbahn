@@ -37,6 +37,10 @@ void setup() {
     digitalWrite(led, LOW);
     return 0;
   }));
+
+  /// [Button hinzufügen]
+  ButtonManager::addButton(&onButton);
+  ButtonManager::addButton(&offButton);
 }
 
 void loop() {

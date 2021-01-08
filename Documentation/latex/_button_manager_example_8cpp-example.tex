@@ -23,14 +23,17 @@
 \DoxyCodeLine{  \textcolor{comment}{/*}}
 \DoxyCodeLine{\textcolor{comment}{   * Sobald der Button gedrückt wird, wird der hier angegebene Code ausgeführt.}}
 \DoxyCodeLine{\textcolor{comment}{   */}}
-\DoxyCodeLine{  onButton.\mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{setCallback}}(CallLambda([] () \{}
+\DoxyCodeLine{  onButton.\mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{setCallback}}(\mbox{\hyperlink{struct_call_lambda}{CallLambda}}([] () \{}
 \DoxyCodeLine{    digitalWrite(led, HIGH);}
 \DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
 \DoxyCodeLine{  \}));}
-\DoxyCodeLine{  offButton.\mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{setCallback}}(CallLambda([] () \{}
+\DoxyCodeLine{  offButton.\mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{setCallback}}(\mbox{\hyperlink{struct_call_lambda}{CallLambda}}([] () \{}
 \DoxyCodeLine{    digitalWrite(led, LOW);}
 \DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
 \DoxyCodeLine{  \}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \mbox{\hyperlink{class_button_manager_abac14494a447472d4611f12f913d5260}{ButtonManager::addButton}}(\&onButton);}
+\DoxyCodeLine{  \mbox{\hyperlink{class_button_manager_abac14494a447472d4611f12f913d5260}{ButtonManager::addButton}}(\&offButton);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keywordtype}{void} loop() \{}

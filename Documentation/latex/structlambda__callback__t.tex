@@ -1,10 +1,19 @@
 \hypertarget{structlambda__callback__t}{}\doxysection{lambda\+\_\+callback\+\_\+t Strukturreferenz}
 \label{structlambda__callback__t}\index{lambda\_callback\_t@{lambda\_callback\_t}}
+
+
+Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{Button\+::set\+Callback()}} zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit.  
+
+
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
 \doxysubsection*{Öffentliche Typen}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{structlambda__callback__t_a1da51211d56878518689c563c14718b6}\label{structlambda__callback__t_a1da51211d56878518689c563c14718b6}} 
-using {\bfseries invoke\+\_\+t} = \mbox{\hyperlink{struct_invocative}{Invocative}}$<$ CALLBACK\+\_\+\+TYPE\+\_\+\+LIST $>$
+using {\bfseries invoke\+\_\+t} = Invocative$<$ CALLBACK\+\_\+\+TYPE\+\_\+\+LIST $>$
 \item 
 \mbox{\Hypertarget{structlambda__callback__t_a07893d483053690818b7ba89ba65a5a9}\label{structlambda__callback__t_a07893d483053690818b7ba89ba65a5a9}} 
 using {\bfseries remover\+\_\+t} = void(void $\ast$)
@@ -25,7 +34,7 @@ void {\bfseries cleanup} ()
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{structlambda__callback__t_ac3929bebbc6929cbfa3d2855fabc3748}\label{structlambda__callback__t_ac3929bebbc6929cbfa3d2855fabc3748}} 
-\mbox{\hyperlink{struct_invocative}{invoke\+\_\+t}} {\bfseries invoke}
+invoke\+\_\+t {\bfseries invoke}
 \item 
 \mbox{\Hypertarget{structlambda__callback__t_ae45283cf28a895827f1310531df0a1d3}\label{structlambda__callback__t_ae45283cf28a895827f1310531df0a1d3}} 
 void $\ast$ {\bfseries lambda}
@@ -34,6 +43,24 @@ void $\ast$ {\bfseries lambda}
 remover\+\_\+t $\ast$ {\bfseries remove}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Ausführliche Beschreibung}
+Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{Button\+::set\+Callback()}} zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} meineFunktion(parameter) \{}
+\DoxyCodeLine{    Tu irgendwas}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ , sondern mit einem ganz neuen Syntax, der allerdings nicht komplizierter ist\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CallLambda([Variablen von Aussen die wir verwenden wollen] (Parameter) \{}
+\DoxyCodeLine{Tu irgendwas; \textcolor{keywordflow}{return} 0; \})}
+
+\end{DoxyCode}
+ Mit {\ttfamily return} 0 stellen wir sicher das alles funktioniert hat. 
 
 Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
 \item 

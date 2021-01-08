@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 <tr class="memitem:a9ba43424a686758b870554d19064fb83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#a9ba43424a686758b870554d19064fb83">Button</a> (byte inputPin, byte lightPin, unsigned long delayTime=60)</td></tr>
 <tr class="memdesc:a9ba43424a686758b870554d19064fb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstelle eine Instanz der Klasse <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a>.  <a href="class_button.html#a9ba43424a686758b870554d19064fb83">Mehr ...</a><br /></td></tr>
 <tr class="separator:a9ba43424a686758b870554d19064fb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a2b43509e6c28ba8b0a4c003ded6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">setCallback</a> (const <a class="el" href="structlambda__callback__t.html">lambda_callback_t</a> &amp;action)</td></tr>
+<tr class="memitem:a54a2b43509e6c28ba8b0a4c003ded6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">setCallback</a> (const lambda_callback_t &amp;action)</td></tr>
 <tr class="memdesc:a54a2b43509e6c28ba8b0a4c003ded6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definiere eine Funktion, die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde.  <a href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba">Mehr ...</a><br /></td></tr>
 <tr class="separator:a54a2b43509e6c28ba8b0a4c003ded6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d285e131ce246682d1dc2b0f9e5f3b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7">handleButton</a> ()</td></tr>
@@ -164,7 +164,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd>Referenz zur Instanz von <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> </dd></dl>
+<p>Wird <code>delayTime</code> nicht angegeben, wird der Standartwert 60 verwendet. </p>
 
 </div>
 </div>
@@ -186,7 +186,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 
 <p>Überprüfe, ob der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. </p>
 <p>Wurde <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt und ist aktiv, wird die durch <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">setCallback()</a> festgelegte Funktion ausgeführt. </p>
-<dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_button_example_8cpp-example.html#a2">ButtonExample.cpp</a>.</dd>
+<dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_button_example_8cpp-example.html#a3">ButtonExample.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -203,7 +203,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
         <tr>
           <td class="memname">void Button::setCallback </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlambda__callback__t.html">lambda_callback_t</a> &amp;&#160;</td>
+          <td class="paramtype">const lambda_callback_t &amp;&#160;</td>
           <td class="paramname"><em>action</em></td><td>)</td>
           <td></td>
         </tr>
@@ -218,7 +218,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 <p>Definiere eine Funktion, die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">action</td><td>Lampdafunktion die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde. Am Ende muss 0 zurückgegeben werden. </td></tr>
+    <tr><td class="paramname">action</td><td>Lampdafunktion (<a class="el" href="struct_call_lambda.html" title="Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von de...">CallLambda</a>) die ausgeführt wird, sobald der <a class="el" href="class_button.html" title="Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird....">Button</a> gedrückt wurde. Am Ende muss 0 zurückgegeben werden. </td></tr>
   </table>
   </dd>
 </dl>

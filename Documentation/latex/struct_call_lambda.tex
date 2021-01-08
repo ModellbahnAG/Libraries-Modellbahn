@@ -1,0 +1,46 @@
+\hypertarget{struct_call_lambda}{}\doxysection{Call\+Lambda Strukturreferenz}
+\label{struct_call_lambda}\index{CallLambda@{CallLambda}}
+
+
+Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{Button\+::set\+Callback()}} zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit.  
+
+
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{Button\+::set\+Callback()}} zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} meineFunktion(parameter) \{}
+\DoxyCodeLine{    Tu irgendwas}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ sondern mit einem ganz neuen Syntax, der allerdings nicht komplizierter ist\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct_call_lambda}{CallLambda}}([Variablen von Aussen die wir verwenden wollen] (Parameter) \{}
+\DoxyCodeLine{Tu irgendwas; \textcolor{keywordflow}{return} 0; \})}
+
+\end{DoxyCode}
+ Mit {\ttfamily return} 0 stellen wir sicher das alles funktioniert hat. 
+
+Diese Funktion können wir jetzt einfach mit 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{meineFunktion(\mbox{\hyperlink{struct_call_lambda}{CallLambda}}([] () \{ Tu etwas; \textcolor{keywordflow}{return} 0; \}))}
+
+\end{DoxyCode}
+ als Parameter an eine andere Funktion übergeben. 
+
+Lambdafunktionen werden häufig für sogenannte \href{https://de.wikipedia.org/wiki/R\%C3\%BCckruffunktion}{\texttt{ Callback Funktionen}} verwendet. \begin{Desc}
+\item[Beispiele]\par
+\mbox{\hyperlink{_button_example_8cpp-example}{Button\+Example.\+cpp}} und \mbox{\hyperlink{_button_manager_example_8cpp-example}{Button\+Manager\+Example.\+cpp}}.\end{Desc}
+
+
+Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennis/\+Cloud\+Station/\+Schule/\+Modellbahn/\+Libraries-\/\+Modellbahn/include/\mbox{\hyperlink{_button_8h}{Button.\+h}}\end{DoxyCompactItemize}

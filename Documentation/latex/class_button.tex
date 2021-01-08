@@ -14,7 +14,7 @@ Erstelle einen \mbox{\hyperlink{class_button}{Button}}, der für eine bestimmte 
 \item 
 \mbox{\hyperlink{class_button_a9ba43424a686758b870554d19064fb83}{Button}} (byte input\+Pin, byte light\+Pin, unsigned long delay\+Time=60)
 \begin{DoxyCompactList}\small\item\em Erstelle eine Instanz der Klasse \mbox{\hyperlink{class_button}{Button}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback}} (const \mbox{\hyperlink{structlambda__callback__t}{lambda\+\_\+callback\+\_\+t}} \&action)
+void \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback}} (const lambda\+\_\+callback\+\_\+t \&action)
 \begin{DoxyCompactList}\small\item\em Definiere eine Funktion, die ausgeführt wird, sobald der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{handle\+Button}} ()
 \begin{DoxyCompactList}\small\item\em Überprüfe, ob der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -48,10 +48,7 @@ Erstelle eine Instanz der Klasse \mbox{\hyperlink{class_button}{Button}}.
 {\em delay\+Time} & Zeit in Sekunden, die der \mbox{\hyperlink{class_button}{Button}} nachdem er gedrückt wurde deaktiviert ist. Während dieser Zeit wird auch das Licht des Buttons deaktiviert. Der Standardwert ist 60\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Rückgabe}
-Referenz zur Instanz von \mbox{\hyperlink{class_button}{Button}} 
-\end{DoxyReturn}
-
+Wird {\ttfamily delay\+Time} nicht angegeben, wird der Standartwert 60 verwendet. 
 
 \doxysubsection{Dokumentation der Elementfunktionen}
 \mbox{\Hypertarget{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}\label{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}} 
@@ -71,7 +68,7 @@ Wurde \mbox{\hyperlink{class_button}{Button}} gedrückt und ist aktiv, wird die 
 \index{Button@{Button}!setCallback@{setCallback}}
 \index{setCallback@{setCallback}!Button@{Button}}
 \doxysubsubsection{\texorpdfstring{setCallback()}{setCallback()}}
-{\footnotesize\ttfamily void Button\+::set\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlambda__callback__t}{lambda\+\_\+callback\+\_\+t}} \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Button\+::set\+Callback (\begin{DoxyParamCaption}\item[{const lambda\+\_\+callback\+\_\+t \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -79,7 +76,7 @@ Definiere eine Funktion, die ausgeführt wird, sobald der \mbox{\hyperlink{class
 
 
 \begin{DoxyParams}{Parameter}
-{\em action} & Lampdafunktion die ausgeführt wird, sobald der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde. Am Ende muss 0 zurückgegeben werden. \\
+{\em action} & Lampdafunktion (\mbox{\hyperlink{struct_call_lambda}{Call\+Lambda}}) die ausgeführt wird, sobald der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde. Am Ende muss 0 zurückgegeben werden. \\
 \hline
 \end{DoxyParams}
 \begin{Desc}

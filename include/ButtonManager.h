@@ -37,13 +37,25 @@ class ButtonManager {
     * @brief Füge einen neuen Button hinzu der verwaltet werden soll
     *
     * @param newButton Zeiger auf einen Button
+    *
+    * @snippet ButtonManagerExample.cpp Buttons hinzufügen
     */
     static void addButton(Button* newButton);
 
 
     /**
     * @brief Überprüfe, ob ein Button gedrückt wurde oder ob einer wieder aktiviert
-		* werden kann. Diese Methode muss in der loop() aufgerufen werden
+		* werden kann.
+    * @note Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen
+    * werden um jeden Druck auf einen Button zu registrieren. Die einfachste
+    * Möglichkeit hierfür ist
+    * {@code void loop() {
+    *   ButtonManager::handleButtons();
+    *   delay(10);
+    * }}
+    * @attention Das Überprüfen der Buttons sollte nicht in einem Timer
+    * geschehen, da es so zu Problemen mit delay() und einigen anderen
+    * Funktionen kommen kann.
     *
     * @details Wurde ein aktiver Button gedrückt, wird die durch Button::setCallback()
 		* festgelegte Funktion ausgeführt.

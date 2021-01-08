@@ -13,6 +13,7 @@
 #include "Arduino.h"
 #include <Wire.h>
 
+/// @cond
 
 /*
  * This portion is derived from:
@@ -60,6 +61,7 @@ AssignInvokeProcedure(Procedural* const& locality) {
  *
  * RETURN_TYPE, ARGUMENT1_TYPE, ARGUMENT2_TYPE, ...
  */
+
 
 struct lambda_callback_t {
 	using invoke_t = Invocative<CALLBACK_TYPE_LIST>;
@@ -115,7 +117,38 @@ struct lambda_callback_t {
 // ALL OF THE ABOVE MUST BE INCLUDED IN LIBRARY USER HEADERS
 //
 // -----------------------------------------------------------------------------
+/// @endcond
 
+
+
+/**
+* @struct CallLambda
+* @brief Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich
+* eigentlich nicht so sehr von den schon bekannten Funktionen (benannte
+* Funktionen). Sie können allerdings viel besser als Parameter an andere
+* Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in
+* Button::setCallback() zu nutze.
+* Eine Lambdafunktion erstellen wir nicht wie sonst mit
+* {@code
+* void meineFunktion(parameter) {
+* 	Tu irgendwas
+* }
+* }
+* sondern mit einem ganz neuen Syntax, der allerdings nicht komplizierter ist:
+* {@code
+* CallLambda([Variablen von Aussen die wir verwenden wollen] (Parameter) {
+* Tu irgendwas; return 0; })
+* }
+* Mit @c return 0 stellen wir sicher das alles funktioniert hat.
+* <p>
+* Diese Funktion können wir jetzt einfach mit
+* {@code
+* meineFunktion(CallLambda([] () { Tu etwas; return 0; }))
+* } als Parameter an eine andere Funktion übergeben.
+* <p>
+* Lambdafunktionen werden häufig für sogenannte
+* [Callback Funktionen](https://de.wikipedia.org/wiki/Rückruffunktion) verwendet.
+*/
 
 
 /**
@@ -141,7 +174,8 @@ class Button {
 		* wurde deaktiviert ist. Während dieser Zeit wird auch das Licht des Buttons
 		* deaktiviert. Der Standardwert ist 60
 		*
-		* @return Referenz zur Instanz von Button
+		* @details Wird @p delayTime nicht angegeben, wird der Standartwert 60
+		* verwendet.
 		*/
     Button(byte inputPin, byte lightPin, unsigned long delayTime = 60);
     ~Button() {
@@ -151,7 +185,7 @@ class Button {
 		/**
 		* @brief Definiere eine Funktion, die ausgeführt wird, sobald der Button
 		* gedrückt wurde
-		* @param action Lampdafunktion die ausgeführt wird, sobald der Button
+		* @param action Lampdafunktion (CallLambda) die ausgeführt wird, sobald der Button
 		* gedrückt wurde. Am Ende muss 0 zurückgegeben werden.
 		*/
 		void setCallback(const lambda_callback_t& action) {

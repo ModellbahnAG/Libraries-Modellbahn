@@ -31,6 +31,8 @@ class LightEffects {
     *
     * @details Der Blitz kann sowohl für Gewitter, als auch für Explosionen
     * eingesetzt werden.
+    * Wird kein Wert für @p duration angegeben, wird der Standardwert
+    * 1 verwendet.
     */
     static void flash(NeoPixel* led, int duration = 1);
 
@@ -40,6 +42,9 @@ class LightEffects {
     * @param led ein Zeiger auf die vorher erstellte Instanz von NeoPixel
     * @param duration die Zeit, die die Fackeln leuchten sollen in Sekunden. Der
     * Standardwert ist 10 Sekunden.
+    *
+    * @details Wird kein Wert für @p duration angegeben, wird der Standardwert
+    * 10 verwendet.
     */
     static void torch(NeoPixel* led, int duration = 10);
 
@@ -49,6 +54,9 @@ class LightEffects {
     * @param led ein Zeiger auf die vorher erstellte Instanz von NeoPixel
     * @param duration die Zeit, die das Feuer brennen soll in Sekunden. Der
     * Standardwert ist 10 Sekunden.
+    *
+    * @details Wird kein Wert für @p duration angegeben, wird der Standardwert
+    * 10 verwendet.
     */
     static void fire(NeoPixel* led, int duration = 10);
 };

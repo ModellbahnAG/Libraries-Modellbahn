@@ -101,11 +101,16 @@ $(document).ready(function(){initNavTree('structlambda__callback__t.html',''); i
 <div class="title">lambda_callback_t Strukturreferenz</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">Button::setCallback()</a> zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit.  
+ <a href="structlambda__callback__t.html#details">Mehr ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_button_8h_source.html">Button.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Öffentliche Typen</h2></td></tr>
 <tr class="memitem:a1da51211d56878518689c563c14718b6"><td class="memItemLeft" align="right" valign="top"><a id="a1da51211d56878518689c563c14718b6"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>invoke_t</b> = <a class="el" href="struct_invocative.html">Invocative</a>&lt; CALLBACK_TYPE_LIST &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>invoke_t</b> = Invocative&lt; CALLBACK_TYPE_LIST &gt;</td></tr>
 <tr class="separator:a1da51211d56878518689c563c14718b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07893d483053690818b7ba89ba65a5a9"><td class="memItemLeft" align="right" valign="top"><a id="a07893d483053690818b7ba89ba65a5a9"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>remover_t</b> = void(void *)</td></tr>
@@ -126,7 +131,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Öffentliche Attribute</h2></td></tr>
 <tr class="memitem:ac3929bebbc6929cbfa3d2855fabc3748"><td class="memItemLeft" align="right" valign="top"><a id="ac3929bebbc6929cbfa3d2855fabc3748"></a>
-<a class="el" href="struct_invocative.html">invoke_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>invoke</b></td></tr>
+invoke_t&#160;</td><td class="memItemRight" valign="bottom"><b>invoke</b></td></tr>
 <tr class="separator:ac3929bebbc6929cbfa3d2855fabc3748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae45283cf28a895827f1310531df0a1d3"><td class="memItemLeft" align="right" valign="top"><a id="ae45283cf28a895827f1310531df0a1d3"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b></td></tr>
@@ -135,7 +140,15 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b></td></tr
 remover_t *&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b></td></tr>
 <tr class="separator:afa8f3461a3565198a096c5d9f10716c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">Button::setCallback()</a> zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> meineFunktion(parameter) {</div>
+<div class="line">    Tu irgendwas</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> , sondern mit einem ganz neuen Syntax, der allerdings nicht komplizierter ist: </p><div class="fragment"><div class="line">CallLambda([Variablen von Aussen die wir verwenden wollen] (Parameter) {</div>
+<div class="line">Tu irgendwas; <span class="keywordflow">return</span> 0; })</div>
+</div><!-- fragment --><p> Mit <code>return</code> 0 stellen wir sicher das alles funktioniert hat. </p>
+</div><hr/>Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:<ul>
 <li>/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-Modellbahn/include/<a class="el" href="_button_8h_source.html">Button.h</a></li>
 </ul>
 </div><!-- contents -->

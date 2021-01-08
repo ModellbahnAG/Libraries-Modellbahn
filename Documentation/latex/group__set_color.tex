@@ -1,0 +1,56 @@
+\hypertarget{group__set_color}{}\doxysection{()}
+\label{group__set_color}\index{()@{()}}
+
+
+Ändere die Farbe einer LED.  
+
+
+\doxysubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__set_color_gacd86a2fe450c8c6dcce8c993789135c2}{Neo\+Pixel\+::set\+Color}} (CRGB color, int pixel)
+\item 
+void \mbox{\hyperlink{group__set_color_ga5db05ed6677dec2eb19e731dc79463b0}{Neo\+Pixel\+::set\+Color}} (int r, int g, int b, int pixel)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Ändere die Farbe einer LED. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em pixel} & Die Nummer der LED die die Farbe bekommen soll \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\mbox{\Hypertarget{group__set_color_gacd86a2fe450c8c6dcce8c993789135c2}\label{group__set_color_gacd86a2fe450c8c6dcce8c993789135c2}} 
+\index{()@{()}!setColor@{setColor}}
+\index{setColor@{setColor}!()@{()}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::set\+Color (\begin{DoxyParamCaption}\item[{CRGB}]{color,  }\item[{int}]{pixel }\end{DoxyParamCaption})}
+
+() 
+\begin{DoxyParams}{Parameter}
+{\em color} & Die Farbe, die die LED bekommen soll als Typ \href{http://fastled.io/docs/3.1/struct_c_r_g_b.html}{\texttt{ CRGB}}. Die Farbe kann als Hexcode ({\ttfamily 0x\+FF0000} für Rot), als {\ttfamily CRGB(255,0,0)} für Rot, oder als {\ttfamily CRGB\+::\+Red} angegeben werden. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Beispiele]\par
+\mbox{\hyperlink{_neo_pixel_example_8cpp-example}{Neo\+Pixel\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{group__set_color_ga5db05ed6677dec2eb19e731dc79463b0}\label{group__set_color_ga5db05ed6677dec2eb19e731dc79463b0}} 
+\index{()@{()}!setColor@{setColor}}
+\index{setColor@{setColor}!()@{()}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::set\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{int}]{pixel }\end{DoxyParamCaption})}
+
+() 
+\begin{DoxyParams}{Parameter}
+{\em r} & Der Rotanteil der Farbe, die die LED bekommen soll \\
+\hline
+{\em g} & Der Grünanteil der Farbe, die die LED bekommen soll \\
+\hline
+{\em b} & Der Blauanteil der Farbe, die die LED bekommen soll \\
+\hline
+\end{DoxyParams}

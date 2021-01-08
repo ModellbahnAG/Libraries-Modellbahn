@@ -16,8 +16,9 @@
 * @class NeoPixel
 * @brief Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit
 * den grundlegensten Funktionen an.
+*
 * @details Diese Klasse implementiert nur die grundlegensten Funktionen. Für
-* alles aufwendigeres wird empfohlen die [FastLED Bibliothek](http://fastled.io)
+* alles aufwendigere wird empfohlen die [FastLED Bibliothek](http://fastled.io)
 * direkt zu verwenden.
 * Derzeit können nur die Pins 2 bis 13 verwendet werden!
 *
@@ -53,8 +54,8 @@ class NeoPixel {
     * @details Werden keine Werte für @p start und @p end angegeben, werden
     * hierfür die Standardwerte verwendet.
     * <p> Diese Methode macht das gleiche wie
-    * NeoPixel::fill(int r, int g, int b, int start = 0, int end = -1) und
-    * unterscheidet sich von ihr nur in ihren Parametern.
+    * {@link NeoPixel::fill(int r, int g, int b, int start = 0, int end = -1)}
+    * und unterscheidet sich von ihr nur in ihren Parametern.
     */
     void fill(CRGB color, int start = 0, int end = -1);
     /**
@@ -73,8 +74,8 @@ class NeoPixel {
     * hierfür die Standardwerte verwendet.
     * <p>
     * Diese Methode macht das gleiche wie
-    * NeoPixel::fill(CRGB color, int start = 0, int end = -1) und unterscheidet
-    * sich von ihr nur in ihren Parametern.
+    * {@link NeoPixel::fill(CRGB color, int start = 0, int end = -1)} und
+    * unterscheidet sich von ihr nur in ihren Parametern.
     */
     void fill(int r, int g, int b, int start = 0, int end = -1);
 
@@ -86,25 +87,34 @@ class NeoPixel {
     * als Hexcode (@c 0xFF0000 für Rot), als @c CRGB(255,0,0) für Rot, oder
     * als @c CRGB::Red angegeben werden.
     * @param pixel Die Nummer der LED die die Farbe bekommen soll
+    *
+    * @details Diese Methode macht das gleiche wie
+    * {@link NeoPixel::setColor(int r, int g, int b, int pixel)} und unterscheidet sich
+    * von ihr nur in ihren Parametern.
     */
     void setColor(CRGB color, int pixel);
     /**
-    * @brief Ändere die Farbe einer LED
+    * @copybrief setColor()
     *
     * @param r Der Rotanteil der Farbe, die die LED bekommen soll
     * @param g Der Grünanteil der Farbe, die die LED bekommen soll
     * @param b Der Blauanteil der Farbe, die die LED bekommen soll
     * @param pixel Die Nummer der LED die die Farbe bekommen soll
+    *
+    * @details Diese Methode macht das gleiche wie
+    * {@link NeoPixel::setColor(CRGB color, int pixel)} und unterscheidet sich
+    * von ihr nur in ihren Parametern.
     */
     void setColor(int r, int g, int b, int pixel);
 
     /**
-    * @copybrief setColor()
+    * @brief Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig
     *
     * @param brightness Die zu setzende Helligkeit. Liegt im Intervall [0, 255].
     * Der Standardwert ist das Maximum von 255
     * @param pixel Die Nummer der LED, die ihre Helligkeit ändern soll. Der
     * Standardwert sind alle LEDs gleichzeitig
+    *
     * @details Die Farbe der LED(s) bleibt dabei erhalten. Es kann sogar von
     * einer dunklen Farbe, wie @c CRGB(10, 10, 10) die Helligkeit erhöht
     * werden.

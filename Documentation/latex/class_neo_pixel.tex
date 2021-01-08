@@ -23,7 +23,7 @@ void \mbox{\hyperlink{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}{set\+Co
 void \mbox{\hyperlink{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}{set\+Color}} (int r, int g, int b, int pixel)
 \begin{DoxyCompactList}\small\item\em Ändere die Farbe einer LED. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_neo_pixel_ae088cc6a5f22401a4f56696d13a8cc69}{set\+Brightness}} (int brightness=255, int pixel=-\/1)
-\begin{DoxyCompactList}\small\item\em Ändere die Farbe einer LED. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_neo_pixel_ae1b399d75b88295065e6846d3e0459c9}{off}} ()
 \begin{DoxyCompactList}\small\item\em Schalte alle LEDs aus. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_neo_pixel_a2baec551d5892662019a04f5943c8995}{get\+Number\+Of\+Pixels}} ()
@@ -33,7 +33,7 @@ int \mbox{\hyperlink{class_neo_pixel_a2baec551d5892662019a04f5943c8995}{get\+Num
 \doxysubsection{Ausführliche Beschreibung}
 Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. 
 
-Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigeres wird empfohlen die \href{http://fastled.io}{\texttt{ Fast\+LED Bibliothek}} direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden! \begin{Desc}
+Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigere wird empfohlen die \href{http://fastled.io}{\texttt{ Fast\+LED Bibliothek}} direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden! \begin{Desc}
 \item[Beispiele]\par
 \mbox{\hyperlink{_neo_pixel_example_8cpp-example}{Neo\+Pixel\+Example.\+cpp}}.\end{Desc}
 
@@ -82,7 +82,7 @@ Derzeit können nur die Pins 2 bis 13 verwendet werden! \begin{DoxyRefDesc}{Noch
 \end{DoxyParams}
 Werden keine Werte für {\ttfamily start} und {\ttfamily end} angegeben, werden hierfür die Standardwerte verwendet. 
 
-Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}{Neo\+Pixel\+::fill}}(int r, int g, int b, int start = 0, int end = -\/1) und unterscheidet sich von ihr nur in ihren Parametern. \begin{Desc}
+Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a0a3f77bcb43b73e4b88b13446291317b}{Neo\+Pixel\+::fill(int r, int g, int b, int start = 0, int end = -\/1)}} und unterscheidet sich von ihr nur in ihren Parametern. \begin{Desc}
 \item[Beispiele]\par
 \mbox{\hyperlink{_neo_pixel_example_8cpp-example}{Neo\+Pixel\+Example.\+cpp}}.\end{Desc}
 \mbox{\Hypertarget{class_neo_pixel_a0a3f77bcb43b73e4b88b13446291317b}\label{class_neo_pixel_a0a3f77bcb43b73e4b88b13446291317b}} 
@@ -110,7 +110,7 @@ Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a67e07318dc
 \end{DoxyParams}
 Werden keine Werte für {\ttfamily start} und {\ttfamily end} angegeben, werden hierfür die Standardwerte verwendet. 
 
-Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}{Neo\+Pixel\+::fill}}(CRGB color, int start = 0, int end = -\/1) und unterscheidet sich von ihr nur in ihren Parametern. \mbox{\Hypertarget{class_neo_pixel_a2baec551d5892662019a04f5943c8995}\label{class_neo_pixel_a2baec551d5892662019a04f5943c8995}} 
+Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}{Neo\+Pixel\+::fill(\+CRGB color, int start = 0, int end = -\/1)}} und unterscheidet sich von ihr nur in ihren Parametern. \mbox{\Hypertarget{class_neo_pixel_a2baec551d5892662019a04f5943c8995}\label{class_neo_pixel_a2baec551d5892662019a04f5943c8995}} 
 \index{NeoPixel@{NeoPixel}!getNumberOfPixels@{getNumberOfPixels}}
 \index{getNumberOfPixels@{getNumberOfPixels}!NeoPixel@{NeoPixel}}
 \doxysubsubsection{\texorpdfstring{getNumberOfPixels()}{getNumberOfPixels()}}
@@ -147,7 +147,7 @@ Alle LEDs werden auf die Farbe Schwarz gesetzt. Um eine einzele LED auszuschalte
 
 
 
-Ändere die Farbe einer LED. 
+Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig. 
 
 
 \begin{DoxyParams}{Parameter}
@@ -173,10 +173,10 @@ Die Farbe der LED(s) bleibt dabei erhalten. Es kann sogar von einer dunklen Farb
 \begin{DoxyParams}{Parameter}
 {\em color} & Die Farbe, die die LED bekommen soll als Typ \href{http://fastled.io/docs/3.1/struct_c_r_g_b.html}{\texttt{ CRGB}}. Die Farbe kann als Hexcode ({\ttfamily 0x\+FF0000} für Rot), als {\ttfamily CRGB(255,0,0)} für Rot, oder als {\ttfamily CRGB\+::\+Red} angegeben werden. \\
 \hline
-{\em pixel} & Die Nummer der LED die die Farbe bekommen soll \\
+{\em pixel} & Die Nummer der LED die die Farbe bekommen soll\\
 \hline
 \end{DoxyParams}
-\begin{Desc}
+Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}{Neo\+Pixel\+::set\+Color(int r, int g, int b, int pixel)}} und unterscheidet sich von ihr nur in ihren Parametern. \begin{Desc}
 \item[Beispiele]\par
 \mbox{\hyperlink{_neo_pixel_example_8cpp-example}{Neo\+Pixel\+Example.\+cpp}}.\end{Desc}
 \mbox{\Hypertarget{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}\label{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}} 
@@ -197,10 +197,10 @@ Die Farbe der LED(s) bleibt dabei erhalten. Es kann sogar von einer dunklen Farb
 \hline
 {\em b} & Der Blauanteil der Farbe, die die LED bekommen soll \\
 \hline
-{\em pixel} & Die Nummer der LED die die Farbe bekommen soll \\
+{\em pixel} & Die Nummer der LED die die Farbe bekommen soll\\
 \hline
 \end{DoxyParams}
-
+Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}{Neo\+Pixel\+::set\+Color(\+CRGB color, int pixel)}} und unterscheidet sich von ihr nur in ihren Parametern. 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
 \item 
