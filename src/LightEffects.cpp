@@ -36,3 +36,35 @@ void LightEffects::torch(NeoPixel *led, int duration) {
   }
   led->off();
 }
+
+void LightEffects::fire(NeoPixel *led, int duration) {
+  struct Flame {
+    int heat = random(50, 240);
+    CRGB color = ColorFromPalette(palette, heat);
+    boolean heatingUP = random(true, false);
+
+    CRGB burn() {
+      heatingUP = (heat <= 50) ? true : (!(heat >= 240) && heatingUP);
+      heat += heatingUP ? 10 : -10;
+
+      color = ColorFromPalette(palette, heat);
+      return color;
+    }
+
+    private:
+      CRGBPalette16 palette = CRGBPalette16(CRGB::Black, CRGB::Red, CRGB::Orange);
+  };
+
+
+  unsigned long startTime = millis();
+  Flame flames[led->getNumberOfPixels()];
+
+  while(millis() < startTime + (duration * 1000)) {
+    for (int i = 0; i < led->getNumberOfPixels(); i++)
+      led->setColor(flames[i].burn(), i);
+
+    delay(50);
+  }
+
+  led->off();
+}
