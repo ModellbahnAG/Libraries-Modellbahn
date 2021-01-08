@@ -1,6 +1,6 @@
 /**
 * @file Button.h
-* @author Dennis Moschina, Aaron Sami Abassi
+* @authors Dennis Moschina, Aaron Sami Abassi
 * @date 28 Dec 2020
 * @copyright 2020 Dennis Moschina, © 2020 Aaron Sami Abassi
 * @brief Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt

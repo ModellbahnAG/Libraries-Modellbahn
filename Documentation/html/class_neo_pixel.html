@@ -123,18 +123,18 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <tr class="memdesc:a5db05ed6677dec2eb19e731dc79463b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Farbe einer LED.  <a href="class_neo_pixel.html#a5db05ed6677dec2eb19e731dc79463b0">Mehr ...</a><br /></td></tr>
 <tr class="separator:a5db05ed6677dec2eb19e731dc79463b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae088cc6a5f22401a4f56696d13a8cc69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#ae088cc6a5f22401a4f56696d13a8cc69">setBrightness</a> (int brightness=255, int pixel=-1)</td></tr>
-<tr class="memdesc:ae088cc6a5f22401a4f56696d13a8cc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig.  <a href="class_neo_pixel.html#ae088cc6a5f22401a4f56696d13a8cc69">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:ae088cc6a5f22401a4f56696d13a8cc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ändere die Farbe einer LED.  <a href="class_neo_pixel.html#ae088cc6a5f22401a4f56696d13a8cc69">Mehr ...</a><br /></td></tr>
 <tr class="separator:ae088cc6a5f22401a4f56696d13a8cc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1b399d75b88295065e6846d3e0459c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">off</a> ()</td></tr>
 <tr class="memdesc:ae1b399d75b88295065e6846d3e0459c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schalte alle LEDs aus.  <a href="class_neo_pixel.html#ae1b399d75b88295065e6846d3e0459c9">Mehr ...</a><br /></td></tr>
 <tr class="separator:ae1b399d75b88295065e6846d3e0459c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2baec551d5892662019a04f5943c8995"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_neo_pixel.html#a2baec551d5892662019a04f5943c8995">getNumberOfPixels</a> ()</td></tr>
-<tr class="memdesc:a2baec551d5892662019a04f5943c8995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erhalte die Anzahl der LEDs im strip.  <a href="class_neo_pixel.html#a2baec551d5892662019a04f5943c8995">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a2baec551d5892662019a04f5943c8995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erhalte die Anzahl der LEDs.  <a href="class_neo_pixel.html#a2baec551d5892662019a04f5943c8995">Mehr ...</a><br /></td></tr>
 <tr class="separator:a2baec551d5892662019a04f5943c8995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. </p>
-<p>Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigeres wird empfohlen die FastLED Bibliothek direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden! </p>
+<p>Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigeres wird empfohlen die <a href="http://fastled.io">FastLED Bibliothek</a> direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden! </p>
 <dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_neo_pixel_example_8cpp-example.html#_a0">NeoPixelExample.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
@@ -172,7 +172,6 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd>Referenz zur Instanz von <a class="el" href="class_neo_pixel.html" title="Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an...">NeoPixel</a></dd></dl>
 <p>Derzeit können nur die Pins 2 bis 13 verwendet werden! </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Noch zu erledigen:</a></b></dt><dd>Weitere Pins verfügbar machen </dd></dl>
 
 </div>
@@ -213,12 +212,14 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <p>Ändere die Farbe aller LEDs in einem bestimmten Intervall. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">color</td><td>Die Farbe die die LEDs bekommen sollen </td></tr>
+    <tr><td class="paramname">color</td><td>Die Farbe die die LEDs bekommen sollen als Typ <a href="http://fastled.io/docs/3.1/struct_c_r_g_b.html">CRGB</a>. Die Farbe kann als Hexcode (<code>0xFF0000</code> für Rot), als <code>CRGB(255,0,0)</code> für Rot, oder als <code>CRGB::Red</code> angegeben werden. </td></tr>
     <tr><td class="paramname">start</td><td>Start des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist 0 </td></tr>
-    <tr><td class="paramname">end</td><td>Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die Anzahl der LEDs im strip </td></tr>
+    <tr><td class="paramname">end</td><td>Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die letze LED. Wird dieser Wert angegeben, muss auch <code>start</code> angegeben werden.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Werden keine Werte für <code>start</code> und <code>end</code> angegeben, werden hierfür die Standardwerte verwendet. </p>
+<p>Diese Methode macht das gleiche wie <a class="el" href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413" title="Ändere die Farbe aller LEDs in einem bestimmten Intervall.">NeoPixel::fill</a>(int r, int g, int b, int start = 0, int end = -1) und unterscheidet sich von ihr nur in ihren Parametern. </p>
 <dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_neo_pixel_example_8cpp-example.html#a1">NeoPixelExample.cpp</a>.</dd>
 </dl>
 
@@ -275,10 +276,12 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
     <tr><td class="paramname">g</td><td>Der Grünanteil der Farbe die die LEDs bekommen sollen </td></tr>
     <tr><td class="paramname">b</td><td>Der Blauanteil der Farbe die die LEDs bekommen sollen </td></tr>
     <tr><td class="paramname">start</td><td>Start des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist 0 </td></tr>
-    <tr><td class="paramname">end</td><td>Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die Anzahl der LEDs im strip </td></tr>
+    <tr><td class="paramname">end</td><td>Ende des Intervalls in dem die LEDs die Farbe bekommen sollen. Der Standardwert ist die letze LED. Wird dieser Wert angegeben, muss auch <code>start</code> angegeben werden.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Werden keine Werte für <code>start</code> und <code>end</code> angegeben, werden hierfür die Standardwerte verwendet. </p>
+<p>Diese Methode macht das gleiche wie <a class="el" href="class_neo_pixel.html#a67e07318dc4aa8becf3edd3f75366413" title="Ändere die Farbe aller LEDs in einem bestimmten Intervall.">NeoPixel::fill</a>(CRGB color, int start = 0, int end = -1) und unterscheidet sich von ihr nur in ihren Parametern. </p>
 
 </div>
 </div>
@@ -297,7 +300,8 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
       </table>
 </div><div class="memdoc">
 
-<p>Erhalte die Anzahl der LEDs im strip. </p>
+<p>Erhalte die Anzahl der LEDs. </p>
+<dl class="section attention"><dt>Achtung</dt><dd>Diese Methode kann nicht genutzt werden um automatisch herauszufinden wie viele LEDs angeschlossen, sie gibt lediglich zurück, was als Anzahl der LEDs vorher angegeben wurde.</dd></dl>
 <dl class="section return"><dt>Rückgabe</dt><dd>Anzahl der LEDs im strip </dd></dl>
 
 </div>
@@ -318,7 +322,7 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 </div><div class="memdoc">
 
 <p>Schalte alle LEDs aus. </p>
-<p>Alle LEDs werden auf die Farbe Schwarz gesetzt </p>
+<p>Alle LEDs werden auf die Farbe Schwarz gesetzt. Um eine einzele LED auszuschalten muss <code>NeoPixel::setColor(CRGB::Black, &lt;Nummer der LED&gt;)</code> verwendet werden. </p>
 <dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_neo_pixel_example_8cpp-example.html#a3">NeoPixelExample.cpp</a>.</dd>
 </dl>
 
@@ -350,14 +354,15 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
       </table>
 </div><div class="memdoc">
 
-<p>Ändere die Helligkeit einer LED oder aller LEDs gleichzeitig. </p>
+<p>Ändere die Farbe einer LED. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">brightness</td><td>Die zu setzende Helligkeit. Liegt im Intervall [0, 255]. Der Standardwert ist das Maximum von 255 </td></tr>
-    <tr><td class="paramname">pixel</td><td>Die Nummer der LED, die ihre Helligkeit ändern soll. Der Standardwert sind alle LEDs gleichzeitig </td></tr>
+    <tr><td class="paramname">pixel</td><td>Die Nummer der LED, die ihre Helligkeit ändern soll. Der Standardwert sind alle LEDs gleichzeitig</td></tr>
   </table>
   </dd>
 </dl>
+<p>Die Farbe der LED(s) bleibt dabei erhalten. Es kann sogar von einer dunklen Farbe, wie <code>CRGB(10, 10, 10)</code> die Helligkeit erhöht werden. </p>
 <dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_neo_pixel_example_8cpp-example.html#a2">NeoPixelExample.cpp</a>.</dd>
 </dl>
 
@@ -392,7 +397,7 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <p>Ändere die Farbe einer LED. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">color</td><td>Die Farbe die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">color</td><td>Die Farbe, die die LED bekommen soll als Typ <a href="http://fastled.io/docs/3.1/struct_c_r_g_b.html">CRGB</a>. Die Farbe kann als Hexcode (<code>0xFF0000</code> für Rot), als <code>CRGB(255,0,0)</code> für Rot, oder als <code>CRGB::Red</code> angegeben werden. </td></tr>
     <tr><td class="paramname">pixel</td><td>Die Nummer der LED die die Farbe bekommen soll </td></tr>
   </table>
   </dd>
@@ -443,9 +448,9 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <p>Ändere die Farbe einer LED. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>Der Rotanteil der Farbe die die LED bekommen soll </td></tr>
-    <tr><td class="paramname">g</td><td>Der Grünanteil der Farbe die die LED bekommen soll </td></tr>
-    <tr><td class="paramname">b</td><td>Der Blauanteil der Farbe die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">r</td><td>Der Rotanteil der Farbe, die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">g</td><td>Der Grünanteil der Farbe, die die LED bekommen soll </td></tr>
+    <tr><td class="paramname">b</td><td>Der Blauanteil der Farbe, die die LED bekommen soll </td></tr>
     <tr><td class="paramname">pixel</td><td>Die Nummer der LED die die Farbe bekommen soll </td></tr>
   </table>
   </dd>
