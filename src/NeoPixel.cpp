@@ -19,8 +19,6 @@ NeoPixel::NeoPixel(int numPixel, int pin) {
     case 12: FastLED.addLeds<NEOPIXEL, 12>(this->leds, numPixel); break;
     case 13: FastLED.addLeds<NEOPIXEL, 13>(this->leds, numPixel); break;
   }
-
-  this->fill(CRGB::Black);
 }
 
 void NeoPixel::fill(CRGB color, int start, int end) {
