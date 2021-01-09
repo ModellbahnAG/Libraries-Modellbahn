@@ -151,15 +151,37 @@ struct lambda_callback_t {
 */
 
 
+
 /**
 * @class Button
-* @brief Erstelle einen Button, der für eine bestimmte Zeit nachdem er
-* gedrückt wurde deaktiviert wird. Während der Button deaktiviert ist, ist sein
-* Licht ausgeschaltet und er reagiert nicht wenn er nochmals gedrückt wird.
-
-* @details Alle Instanzen müssen vor oder im setup erzeugt werden. In der loop
-* muss handleButton() ausgeführt werden. Bei der Verwendung von mehreren Buttons
-* wird die Verwendung von ButtonManager empfohlen.
+* @brief Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er
+* gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im Button eingebaute)
+* Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist.
+*
+* @details Der Button ist mit dem internen PULLUP-Widerstand angeschlossen, das
+* heißt, dass der Button nur zwischen @c GND und dem Pin ohne einen externen
+* Widerstand angeschlossen wird.
+*
+* @note Alle Instanzen müssen vor oder im setup erzeugt werdenund die Methode
+* Button::handleButton() muss regelmäßig in kurzen Zeitabständen aufgerufen
+* werden um jeden Druck auf den Button zu registrieren. Die einfachste
+* Möglichkeit hierfür ist
+* {@code void loop() {
+*   myButton.handleButton();
+*   delay(10);
+* }}
+* Bei der Verwendung von mehreren Buttons wird die Verwendung von ButtonManager
+* empfohlen.
+*
+* @attention Das Überprüfen des Buttons sollte nicht in einem Timer
+* geschehen, da es so zu Problemen mit delay() und einigen anderen
+* Funktionen kommen kann.
+*
+* @pre Um die Funktionen von Button nutzen zu können, muss zuerst ein Objekt von
+* Button erzeugt werden.
+* {@code Buttton myButton = Button(buttonPin, lightPin, delayTime);}
+* @p buttonPin, @p lightPin, @p delayTime müssen dabei vorher angegebn werden
+* oder direkt durch eine Zahl ersetzt werden.
 *
 * @example ButtonExample.cpp
 */
@@ -194,9 +216,24 @@ class Button {
 
 		/**
 		* @brief Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert
-		* werden kann. Diese Methode muss in der loop() aufgerufen werden
-		* @details Wurde Button gedrückt und ist aktiv, wird die durch setCallback()
-		* festgelegte Funktion ausgeführt.
+		* werden kann.
+		*
+		* @details Wurde der Button gedrückt und ist aktiv, wird die durch
+		* setCallback() festgelegte Funktion ausgeführt.
+		*
+		* @note Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen
+		* werden um jeden Druck auf den Button zu registrieren. Die einfachste
+		* Möglichkeit hierfür ist:
+		* {@code
+		* void loop() {
+		* 	myButton.handleButton();
+		* 	delay(10);
+		* }
+		* }
+		*
+		* @attention Das Überprüfen des Buttons sollte nicht in einem Timer
+		* geschehen, da es so zu Problemen mit @c delay() und einigen anderen
+		* Funktionen kommen kann.
 		*/
     void handleButton();
 

@@ -2,7 +2,7 @@
 \label{class_button}\index{Button@{Button}}
 
 
-Erstelle einen \mbox{\hyperlink{class_button}{Button}}, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird. Während der \mbox{\hyperlink{class_button}{Button}} deaktiviert ist, ist sein Licht ausgeschaltet und er reagiert nicht wenn er nochmals gedrückt wird.  
+Der \mbox{\hyperlink{class_button}{Button}} wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im \mbox{\hyperlink{class_button}{Button}} eingebaute) Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist.  
 
 
 
@@ -17,13 +17,37 @@ Erstelle einen \mbox{\hyperlink{class_button}{Button}}, der für eine bestimmte 
 void \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback}} (const lambda\+\_\+callback\+\_\+t \&action)
 \begin{DoxyCompactList}\small\item\em Definiere eine Funktion, die ausgeführt wird, sobald der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{handle\+Button}} ()
-\begin{DoxyCompactList}\small\item\em Überprüfe, ob der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Überprüfe, ob der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob er wieder aktiviert werden kann. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Ausführliche Beschreibung}
-Erstelle einen \mbox{\hyperlink{class_button}{Button}}, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird. Während der \mbox{\hyperlink{class_button}{Button}} deaktiviert ist, ist sein Licht ausgeschaltet und er reagiert nicht wenn er nochmals gedrückt wird. 
+Der \mbox{\hyperlink{class_button}{Button}} wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im \mbox{\hyperlink{class_button}{Button}} eingebaute) Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist. 
 
-Alle Instanzen müssen vor oder im setup erzeugt werden. In der loop muss \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{handle\+Button()}} ausgeführt werden. Bei der Verwendung von mehreren Buttons wird die Verwendung von \mbox{\hyperlink{class_button_manager}{Button\+Manager}} empfohlen. \begin{Desc}
+Der \mbox{\hyperlink{class_button}{Button}} ist mit dem internen PULLUP-\/\+Widerstand angeschlossen, das heißt, dass der \mbox{\hyperlink{class_button}{Button}} nur zwischen {\ttfamily GND} und dem Pin ohne einen externen Widerstand angeschlossen wird.
+
+\begin{DoxyNote}{Zu beachten}
+Alle Instanzen müssen vor oder im setup erzeugt werdenund die Methode \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{Button\+::handle\+Button()}} muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \textcolor{keywordtype}{void} loop() \{}
+\DoxyCodeLine{  myButton.handleButton();}
+\DoxyCodeLine{  delay(10);}
+\DoxyCodeLine{\} }
+
+\end{DoxyCode}
+ Bei der Verwendung von mehreren Buttons wird die Verwendung von \mbox{\hyperlink{class_button_manager}{Button\+Manager}} empfohlen.
+\end{DoxyNote}
+\begin{DoxyAttention}{Achtung}
+Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit delay() und einigen anderen Funktionen kommen kann.
+\end{DoxyAttention}
+\begin{DoxyPrecond}{Vorbedingung}
+Um die Funktionen von \mbox{\hyperlink{class_button}{Button}} nutzen zu können, muss zuerst ein Objekt von \mbox{\hyperlink{class_button}{Button}} erzeugt werden. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Buttton myButton = \mbox{\hyperlink{class_button_a9ba43424a686758b870554d19064fb83}{Button}}(buttonPin, lightPin, delayTime); }
+
+\end{DoxyCode}
+ {\ttfamily button\+Pin}, {\ttfamily light\+Pin}, {\ttfamily delay\+Time} müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. 
+\end{DoxyPrecond}
+\begin{Desc}
 \item[Beispiele]\par
 \mbox{\hyperlink{_button_example_8cpp-example}{Button\+Example.\+cpp}} und \mbox{\hyperlink{_button_manager_example_8cpp-example}{Button\+Manager\+Example.\+cpp}}.\end{Desc}
 
@@ -59,9 +83,25 @@ Wird {\ttfamily delay\+Time} nicht angegeben, wird der Standartwert 60 verwendet
 
 
 
-Überprüfe, ob der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob er wieder aktiviert werden kann. Diese Methode muss in der loop() aufgerufen werden. 
+Überprüfe, ob der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob er wieder aktiviert werden kann. 
 
-Wurde \mbox{\hyperlink{class_button}{Button}} gedrückt und ist aktiv, wird die durch \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback()}} festgelegte Funktion ausgeführt. \begin{Desc}
+Wurde der \mbox{\hyperlink{class_button}{Button}} gedrückt und ist aktiv, wird die durch \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback()}} festgelegte Funktion ausgeführt.
+
+\begin{DoxyNote}{Zu beachten}
+Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} loop() \{}
+\DoxyCodeLine{    myButton.handleButton();}
+\DoxyCodeLine{    delay(10);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\end{DoxyNote}
+\begin{DoxyAttention}{Achtung}
+Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit {\ttfamily delay()} und einigen anderen Funktionen kommen kann. 
+\end{DoxyAttention}
+\begin{Desc}
 \item[Beispiele]\par
 \mbox{\hyperlink{_button_example_8cpp-example}{Button\+Example.\+cpp}}.\end{Desc}
 \mbox{\Hypertarget{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}\label{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}} 
