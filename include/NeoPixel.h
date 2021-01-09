@@ -123,8 +123,8 @@ class NeoPixel {
     * Standardwert sind alle LEDs gleichzeitig
     *
     * @details Die Farbe der LED(s) bleibt dabei erhalten. Es kann sogar von
-    * einer dunklen Farbe, wie @c CRGB(10, 10, 10) die Helligkeit erhöht
-    * werden.
+    * einer dunklen Farbe, wie @c CRGB(10, 10, 10) die Helligkeit erhöht werden.
+    * Wird kein Wert für @p pixel angegeben, wird der Standardwert verwendet.
     */
     void setBrightness(int brightness = 255, int pixel = -1);
 

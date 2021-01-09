@@ -23,6 +23,7 @@ Button myButton = Button(BUTTON_PIN, BUTTON_LIGHT_PIN, 60);
 void setup() {
   pinMode(led, OUTPUT);
 
+  // [setCallback]
   /*
    * Sobald der Button gedrückt wird, wird der hier angegebene Code ausgeführt.
    */
@@ -32,6 +33,7 @@ void setup() {
     digitalWrite(led, LOW);
     return 0;
   }));
+  // [setCallback]
 }
 
 void loop() {

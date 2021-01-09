@@ -212,6 +212,9 @@ class Button {
 		* gedrückt wurde
 		* @param action Lampdafunktion (CallLambda) die ausgeführt wird, sobald der Button
 		* gedrückt wurde. Am Ende muss 0 zurückgegeben werden.
+		*
+		* Verwendung:
+		* @snippet ButtonExample setCallback
 		*/
 		void setCallback(const lambda_callback_t& action) {
       this->callback.replace(action);

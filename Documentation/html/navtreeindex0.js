@@ -19,7 +19,7 @@ var NAVTREEINDEX0 =
 "class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba":[1,1,1,3],
 "class_button.html#a9ba43424a686758b870554d19064fb83":[1,1,1,0],
 "class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7":[1,1,1,2],
-"class_button_manager.html":[1,1,2],
+"class_button_manager.html":[1,1,3],
 "class_light_effects.html":[1,0,0],
 "class_neo_pixel.html":[1,0,1],
 "class_neo_pixel.html#a0a3f77bcb43b73e4b88b13446291317b":[1,0,1,2],
@@ -44,9 +44,9 @@ var NAVTREEINDEX0 =
 "index.html":[],
 "modules.html":[1],
 "pages.html":[],
-"struct_button_list_item.html":[2,0,1],
-"struct_button_list_item.html#a461f13caa177b0d951b0e4f20377cdd8":[2,0,1,1],
-"struct_button_list_item.html#acfa1827894392492d1c2d81c4014e5fe":[2,0,1,0],
+"struct_button_list_item.html":[1,1,2],
+"struct_button_list_item.html#a461f13caa177b0d951b0e4f20377cdd8":[1,1,2,1],
+"struct_button_list_item.html#acfa1827894392492d1c2d81c4014e5fe":[1,1,2,0],
 "struct_call_lambda.html":[1,1,0],
 "todo.html":[0]
 };

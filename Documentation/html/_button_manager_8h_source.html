@@ -103,28 +103,28 @@ $(document).ready(function(){initNavTree('_button_manager_8h_source.html',''); i
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_button_8h.html">Button.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_button_list_item.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_button_list_item.html">ButtonListItem</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="class_button.html">Button</a>* button;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="struct_button_list_item.html">ButtonListItem</a>* next;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_button_manager.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_button_manager.html">ButtonManager</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_button_manager.html#abac14494a447472d4611f12f913d5260">   44</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_button_manager.html#abac14494a447472d4611f12f913d5260">addButton</a>(<a class="code" href="class_button.html">Button</a>* newButton);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_button_manager.html#a7ed76c846a1b745a5bb75d1af973fd83">   64</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_button_manager.html#a7ed76c846a1b745a5bb75d1af973fd83">handleButtons</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> <a class="code" href="struct_button_list_item.html">ButtonListItem</a>* listHead;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_button_list_item.html">   22</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_button_list_item.html">ButtonListItem</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="class_button.html">Button</a>* button;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="struct_button_list_item.html">ButtonListItem</a>* next;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_button_manager.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_button_manager.html">ButtonManager</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_button_manager.html#abac14494a447472d4611f12f913d5260">   46</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_button_manager.html#abac14494a447472d4611f12f913d5260">addButton</a>(<a class="code" href="class_button.html">Button</a>* newButton);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_button_manager.html#a7ed76c846a1b745a5bb75d1af973fd83">   66</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_button_manager.html#a7ed76c846a1b745a5bb75d1af973fd83">handleButtons</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <a class="code" href="struct_button_list_item.html">ButtonListItem</a>* listHead;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_button_8h_html"><div class="ttname"><a href="_button_8h.html">Button.h</a></div><div class="ttdoc">Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird.</div></div>
 <div class="ttc" id="aclass_button_html"><div class="ttname"><a href="class_button.html">Button</a></div><div class="ttdoc">Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...</div><div class="ttdef"><b>Definition:</b> Button.h:191</div></div>
-<div class="ttc" id="aclass_button_manager_html"><div class="ttname"><a href="class_button_manager.html">ButtonManager</a></div><div class="ttdoc">Verwalte einfach mehrere Buttons in einem Programm.</div><div class="ttdef"><b>Definition:</b> ButtonManager.h:35</div></div>
+<div class="ttc" id="aclass_button_manager_html"><div class="ttname"><a href="class_button_manager.html">ButtonManager</a></div><div class="ttdoc">Verwalte einfach mehrere Buttons in einem Programm.</div><div class="ttdef"><b>Definition:</b> ButtonManager.h:36</div></div>
 <div class="ttc" id="aclass_button_manager_html_a7ed76c846a1b745a5bb75d1af973fd83"><div class="ttname"><a href="class_button_manager.html#a7ed76c846a1b745a5bb75d1af973fd83">ButtonManager::handleButtons</a></div><div class="ttdeci">static void handleButtons()</div><div class="ttdoc">Überprüfe, ob ein Button gedrückt wurde oder ob einer wieder aktiviert werden kann.</div></div>
 <div class="ttc" id="aclass_button_manager_html_abac14494a447472d4611f12f913d5260"><div class="ttname"><a href="class_button_manager.html#abac14494a447472d4611f12f913d5260">ButtonManager::addButton</a></div><div class="ttdeci">static void addButton(Button *newButton)</div><div class="ttdoc">Füge einen neuen Button hinzu der verwaltet werden soll.</div></div>
-<div class="ttc" id="astruct_button_list_item_html"><div class="ttname"><a href="struct_button_list_item.html">ButtonListItem</a></div><div class="ttdoc">Ein Element einer Linked List in der alle Buttons gespeichert werden. So können beliebig viele Button...</div><div class="ttdef"><b>Definition:</b> ButtonManager.h:21</div></div>
+<div class="ttc" id="astruct_button_list_item_html"><div class="ttname"><a href="struct_button_list_item.html">ButtonListItem</a></div><div class="ttdoc">Ein Element einer Linked List in der alle Buttons gespeichert werden. So können beliebig viele Button...</div><div class="ttdef"><b>Definition:</b> ButtonManager.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

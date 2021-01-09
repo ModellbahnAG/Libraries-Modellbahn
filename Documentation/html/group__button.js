@@ -7,5 +7,9 @@ var group__button =
       [ "handleButton", "class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7", null ],
       [ "setCallback", "class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba", null ]
     ] ],
+    [ "ButtonListItem", "struct_button_list_item.html", [
+      [ "button", "struct_button_list_item.html#acfa1827894392492d1c2d81c4014e5fe", null ],
+      [ "next", "struct_button_list_item.html#a461f13caa177b0d951b0e4f20377cdd8", null ]
+    ] ],
     [ "ButtonManager", "class_button_manager.html", null ]
 ];

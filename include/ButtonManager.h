@@ -14,6 +14,7 @@
 #include "Button.h"
 
 /**
+* @ingroup button
 * @class ButtonListItem
 * @brief Ein Element einer Linked List in der alle Buttons gespeichert werden.
 * So können beliebig viele Buttons erzeugt werden.
@@ -39,7 +40,8 @@ class ButtonManager {
     *
     * @param newButton Zeiger auf einen Button
     *
-    * @snippet ButtonManagerExample.cpp Buttons hinzufügen
+    * Verwendung:
+    * @snippet ButtonManagerExample.cpp addButton
     */
     static void addButton(Button* newButton);
 

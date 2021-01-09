@@ -38,8 +38,9 @@ void setup() {
     return 0;
   }));
 
-  /// [Button hinzufügen]
+  // [addButton]
   ButtonManager::addButton(&onButton);
+  // [addButton]
   ButtonManager::addButton(&offButton);
 }
 
