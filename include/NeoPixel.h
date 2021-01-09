@@ -13,14 +13,21 @@
 #include <FastLED.h>
 
 /**
+* @ingroup rgbled
 * @class NeoPixel
 * @brief Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit
-* den grundlegensten Funktionen an.
+* den grundlegensten Funktionen an. Es können nur WS2812B LEDs verwendet werden.
 *
 * @details Diese Klasse implementiert nur die grundlegensten Funktionen. Für
 * alles aufwendigere wird empfohlen die [FastLED Bibliothek](http://fastled.io)
 * direkt zu verwenden.
 * Derzeit können nur die Pins 2 bis 13 verwendet werden!
+*
+* @pre Um die Funktionen von NeoPixel nutzen zu können, muss zuerst ein Objekt
+* von NeoPixel erzeugt werden.
+* {@code NeoPixel myLED = NeoPixel(numberOfPixels, pin);}
+* @p numberOfPixels und @p pin müssen dabei vorher angegebn werden oder direkt
+* durch eine Zahl ersetzt werden.
 *
 * @example NeoPixelExample.cpp
 */
@@ -33,7 +40,7 @@ class NeoPixel {
     * @param numPixel Die Anzahl der LEDs im LED strip
     * @param pin Der Pin, an den der LED strip angeschlossen ist
     *
-    * @details Derzeit können nur die Pins 2 bis 13 verwendet werden!
+    * @attention Derzeit können nur die Pins 2 bis 13 verwendet werden!
     * @todo Weitere Pins verfügbar machen
     */
     NeoPixel(int numPixel, int pin);
@@ -123,6 +130,7 @@ class NeoPixel {
 
     /**
     * @brief Schalte alle LEDs aus
+    *
     * @details Alle LEDs werden auf die Farbe Schwarz gesetzt. Um eine einzele
     * LED auszuschalten muss @c NeoPixel::setColor(CRGB::Black, <Nummer der LED>)
     * verwendet werden.

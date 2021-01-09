@@ -26,6 +26,7 @@ var NAVTREE =
 [
   [ "Modellbahn", "index.html", [
     [ "Ausstehende Aufgaben", "todo.html", null ],
+    [ "Module", "modules.html", "modules" ],
     [ "Klassen", "annotated.html", [
       [ "Auflistung der Klassen", "annotated.html", "annotated_dup" ],
       [ "Klassen-Verzeichnis", "classes.html", null ],

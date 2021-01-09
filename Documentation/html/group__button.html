@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Modellbahn: /Users/dennis/CloudStation/Schule/Modellbahn/Libraries-Modellbahn/include/Modellbahn.h Quellcode</title>
+<title>Modellbahn: Button Management</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('_modellbahn_8h_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('group__button.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,31 +92,35 @@ $(document).ready(function(){initNavTree('_modellbahn_8h_source.html',''); initR
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Klassen</a>  </div>
   <div class="headertitle">
-<div class="title">Modellbahn.h</div>  </div>
+<div class="title">Button Management</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_modellbahn_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef MODELLBAHN_H</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define MODELLBAHN_H</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_button_manager_8h.html">ButtonManager.h</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_button_8h.html">Button.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_neo_pixel_8h.html">NeoPixel.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_light_effects_8h.html">LightEffects.h</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_button_8h_html"><div class="ttname"><a href="_button_8h.html">Button.h</a></div><div class="ttdoc">Erstelle einen Button, der für eine bestimmte Zeit nachdem er gedrückt wurde deaktiviert wird.</div></div>
-<div class="ttc" id="a_button_manager_8h_html"><div class="ttname"><a href="_button_manager_8h.html">ButtonManager.h</a></div><div class="ttdoc">Verwalte einfach mehrere Buttons in einem Programm.</div></div>
-<div class="ttc" id="a_light_effects_8h_html"><div class="ttname"><a href="_light_effects_8h.html">LightEffects.h</a></div><div class="ttdoc">Eine Sammlung von Lichteffekten, die immer mal wieder gebraucht werden können.</div></div>
-<div class="ttc" id="a_neo_pixel_8h_html"><div class="ttname"><a href="_neo_pixel_8h.html">NeoPixel.h</a></div><div class="ttdoc">Ein einfacher Wrapper für die FastLED Bibliothek.</div></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>Erzeuge Buttons, die immer eine bestimmte Zeit deaktiviert sind nachdem sie gedrückt wurden und verwalte diese unkompliziert.  
+<a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_lambda.html">CallLambda</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">Button::setCallback()</a> zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit.  <a href="struct_call_lambda.html#details">Mehr ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html">Button</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> eingebaute) Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist.  <a href="class_button.html#details">Mehr ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_manager.html">ButtonManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verwalte einfach mehrere Buttons in einem Programm.  <a href="class_button_manager.html#details">Mehr ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<p>Erzeuge Buttons, die immer eine bestimmte Zeit deaktiviert sind nachdem sie gedrückt wurden und verwalte diese unkompliziert. </p>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_modellbahn_8h.html">Modellbahn.h</a></li>
     <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
   </ul>
 </div>

@@ -1,4 +1,5 @@
 var modules =
 [
-    [ "()", "group__set_color.html", "group__set_color" ]
+    [ "RGB LED", "group__rgbled.html", "group__rgbled" ],
+    [ "Button Management", "group__button.html", "group__button" ]
 ];

@@ -14,11 +14,14 @@
 #include "NeoPixel.h"
 
 /**
+* @ingroup rgbled
 * @class LightEffects
 * @brief Eine Sammlung von Lichteffekten, die immer mal wieder gebraucht werden
 * können.
-* @details Für jede dieser Funktionen muss vorher eine Instanz von NeoPixel
+* @pre Für jede dieser Funktionen muss vorher eine Instanz von NeoPixel
 * erzeugt werden.
+* @details flash(), torch() und fire() sind auch direkt von NeoPixel
+* aus verwendbar.
 */
 class LightEffects {
   public:

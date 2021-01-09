@@ -24,6 +24,7 @@ struct ButtonListItem {
 };
 
 /**
+* @ingroup button
 * @class ButtonManager
 * @brief Verwalte einfach mehrere Buttons in einem Programm.
 *

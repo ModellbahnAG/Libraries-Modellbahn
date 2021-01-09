@@ -148,11 +148,14 @@ struct lambda_callback_t {
 * <p>
 * Lambdafunktionen werden häufig für sogenannte
 * [Callback Funktionen](https://de.wikipedia.org/wiki/Rückruffunktion) verwendet.
+*
+* @ingroup button
 */
 
 
 
 /**
+* @ingroup button
 * @class Button
 * @brief Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er
 * gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im Button eingebaute)

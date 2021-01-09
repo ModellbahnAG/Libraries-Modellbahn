@@ -96,11 +96,11 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
 <a href="class_neo_pixel-members.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
-<div class="title">NeoPixel Klassenreferenz</div>  </div>
+<div class="title">NeoPixel Klassenreferenz<div class="ingroups"><a class="el" href="group__rgbled.html">RGB LED</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an.  
+<p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. Es können nur WS2812B LEDs verwendet werden.  
  <a href="class_neo_pixel.html#details">Mehr ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_neo_pixel_8h_source.html">NeoPixel.h</a>&gt;</code></p>
@@ -142,8 +142,12 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
 <tr class="separator:ac8f4194cc87c39b2a47e2baba6bf54f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. </p>
-<p>Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigere wird empfohlen die <a href="http://fastled.io">FastLED Bibliothek</a> direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden! </p>
+<div class="textblock"><p>Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. Es können nur WS2812B LEDs verwendet werden. </p>
+<p>Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigere wird empfohlen die <a href="http://fastled.io">FastLED Bibliothek</a> direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden!</p>
+<dl class="section pre"><dt>Vorbedingung</dt><dd>Um die Funktionen von <a class="el" href="class_neo_pixel.html" title="Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an...">NeoPixel</a> nutzen zu können, muss zuerst ein Objekt von <a class="el" href="class_neo_pixel.html" title="Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an...">NeoPixel</a> erzeugt werden. <div class="fragment"><div class="line"><a class="code" href="class_neo_pixel.html">NeoPixel</a> myLED = <a class="code" href="class_neo_pixel.html#a6ad2ee6bce11578331c17cdc9c6f9122">NeoPixel</a>(numberOfPixels, pin); </div>
+<div class="ttc" id="aclass_neo_pixel_html"><div class="ttname"><a href="class_neo_pixel.html">NeoPixel</a></div><div class="ttdoc">Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an...</div><div class="ttdef"><b>Definition:</b> NeoPixel.h:34</div></div>
+<div class="ttc" id="aclass_neo_pixel_html_a6ad2ee6bce11578331c17cdc9c6f9122"><div class="ttname"><a href="class_neo_pixel.html#a6ad2ee6bce11578331c17cdc9c6f9122">NeoPixel::NeoPixel</a></div><div class="ttdeci">NeoPixel(int numPixel, int pin)</div><div class="ttdoc">Erstelle einen LED strip mit einer festen Anzahl an LEDs und steuere diesen leicht an.</div></div>
+</div><!-- fragment --> <code>numberOfPixels</code> und <code>pin</code> müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. </dd></dl>
 <dl class="section examples"><dt>Beispiele</dt><dd><a class="el" href="_neo_pixel_example_8cpp-example.html#_a0">NeoPixelExample.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
@@ -181,7 +185,8 @@ $(document).ready(function(){initNavTree('class_neo_pixel.html',''); initResizab
   </table>
   </dd>
 </dl>
-<p>Derzeit können nur die Pins 2 bis 13 verwendet werden! </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Noch zu erledigen:</a></b></dt><dd>Weitere Pins verfügbar machen </dd></dl>
+<dl class="section attention"><dt>Achtung</dt><dd>Derzeit können nur die Pins 2 bis 13 verwendet werden! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Noch zu erledigen:</a></b></dt><dd>Weitere Pins verfügbar machen </dd></dl>
 
 </div>
 </div>

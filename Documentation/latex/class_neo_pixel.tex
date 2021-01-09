@@ -2,7 +2,7 @@
 \label{class_neo_pixel}\index{NeoPixel@{NeoPixel}}
 
 
-Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an.  
+Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. Es können nur WS2812B LEDs verwendet werden.  
 
 
 
@@ -37,9 +37,19 @@ void \mbox{\hyperlink{class_neo_pixel_ac8f4194cc87c39b2a47e2baba6bf54f6}{fire}} 
 
 
 \doxysubsection{Ausführliche Beschreibung}
-Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. 
+Füge einfach neue LED strips zum Projekt hinzu und steuere diese mit den grundlegensten Funktionen an. Es können nur WS2812B LEDs verwendet werden. 
 
-Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigere wird empfohlen die \href{http://fastled.io}{\texttt{ Fast\+LED Bibliothek}} direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden! \begin{Desc}
+Diese Klasse implementiert nur die grundlegensten Funktionen. Für alles aufwendigere wird empfohlen die \href{http://fastled.io}{\texttt{ Fast\+LED Bibliothek}} direkt zu verwenden. Derzeit können nur die Pins 2 bis 13 verwendet werden!
+
+\begin{DoxyPrecond}{Vorbedingung}
+Um die Funktionen von \mbox{\hyperlink{class_neo_pixel}{Neo\+Pixel}} nutzen zu können, muss zuerst ein Objekt von \mbox{\hyperlink{class_neo_pixel}{Neo\+Pixel}} erzeugt werden. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_neo_pixel}{NeoPixel}} myLED = \mbox{\hyperlink{class_neo_pixel_a6ad2ee6bce11578331c17cdc9c6f9122}{NeoPixel}}(numberOfPixels, pin); }
+
+\end{DoxyCode}
+ {\ttfamily number\+Of\+Pixels} und {\ttfamily pin} müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. 
+\end{DoxyPrecond}
+\begin{Desc}
 \item[Beispiele]\par
 \mbox{\hyperlink{_neo_pixel_example_8cpp-example}{Neo\+Pixel\+Example.\+cpp}}.\end{Desc}
 
@@ -62,7 +72,10 @@ Erstelle einen LED strip mit einer festen Anzahl an LEDs und steuere diesen leic
 {\em pin} & Der Pin, an den der LED strip angeschlossen ist\\
 \hline
 \end{DoxyParams}
-Derzeit können nur die Pins 2 bis 13 verwendet werden! \begin{DoxyRefDesc}{Noch zu erledigen}
+\begin{DoxyAttention}{Achtung}
+Derzeit können nur die Pins 2 bis 13 verwendet werden! 
+\end{DoxyAttention}
+\begin{DoxyRefDesc}{Noch zu erledigen}
 \item[\mbox{\hyperlink{todo__todo000001}{Noch zu erledigen}}]Weitere Pins verfügbar machen \end{DoxyRefDesc}
 
 

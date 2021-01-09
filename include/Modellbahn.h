@@ -16,4 +16,15 @@
 #include "NeoPixel.h"
 #include "LightEffects.h"
 
+
+/**
+* @defgroup rgbled RGB LED
+* @brief Steuere unkompliziert RGB-LEDs an und verwende schon fertige Lichteffekte.
+*/
+/**
+* @defgroup button Button Management
+* @brief Erzeuge Buttons, die immer eine bestimmte Zeit deaktiviert sind nachdem
+* sie gedrückt wurden und verwalte diese unkompliziert.
+*/
+
 #endif
