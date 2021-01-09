@@ -1,4 +1,5 @@
 #include <NeoPixel.h>
+#include <LightEffects.h>
 
 NeoPixel::NeoPixel(int numPixel, int pin) {
   this->numPixel = numPixel;
@@ -64,4 +65,16 @@ void NeoPixel::off() {
 
 int NeoPixel::getNumberOfPixels() {
   return this->numPixel;
+}
+
+void NeoPixel::flash(int duration) {
+  LightEffects::flash(this, duration);
+}
+
+void NeoPixel::torch(int duration) {
+  LightEffects::torch(this, duration);
+}
+
+void NeoPixel::fire(int duration) {
+  LightEffects::fire(this, duration);
 }

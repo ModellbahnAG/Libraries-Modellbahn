@@ -27,7 +27,13 @@ void \mbox{\hyperlink{class_neo_pixel_ae088cc6a5f22401a4f56696d13a8cc69}{set\+Br
 void \mbox{\hyperlink{class_neo_pixel_ae1b399d75b88295065e6846d3e0459c9}{off}} ()
 \begin{DoxyCompactList}\small\item\em Schalte alle LEDs aus. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_neo_pixel_a2baec551d5892662019a04f5943c8995}{get\+Number\+Of\+Pixels}} ()
-\begin{DoxyCompactList}\small\item\em Erhalte die Anzahl der LEDs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Erhalte die Anzahl der LEDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_a4dc97c65eb9f29158897527934787786}{flash}} (int duration=1)
+\begin{DoxyCompactList}\small\item\em Simuliere einen Blitz für eine bestimmte Zeit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_a592b314629766624baaf3af2f2ba9868}{torch}} (int duration=10)
+\begin{DoxyCompactList}\small\item\em Simuliere eine Fackel für eine bestimmte Zeit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_neo_pixel_ac8f4194cc87c39b2a47e2baba6bf54f6}{fire}} (int duration=10)
+\begin{DoxyCompactList}\small\item\em Simuliere ein Feuer für eine bestimmte Zeit. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Ausführliche Beschreibung}
@@ -110,7 +116,47 @@ Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a0a3f77bcb4
 \end{DoxyParams}
 Werden keine Werte für {\ttfamily start} und {\ttfamily end} angegeben, werden hierfür die Standardwerte verwendet. 
 
-Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}{Neo\+Pixel\+::fill(\+CRGB color, int start = 0, int end = -\/1)}} und unterscheidet sich von ihr nur in ihren Parametern. \mbox{\Hypertarget{class_neo_pixel_a2baec551d5892662019a04f5943c8995}\label{class_neo_pixel_a2baec551d5892662019a04f5943c8995}} 
+Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}{Neo\+Pixel\+::fill(\+CRGB color, int start = 0, int end = -\/1)}} und unterscheidet sich von ihr nur in ihren Parametern. \mbox{\Hypertarget{class_neo_pixel_ac8f4194cc87c39b2a47e2baba6bf54f6}\label{class_neo_pixel_ac8f4194cc87c39b2a47e2baba6bf54f6}} 
+\index{NeoPixel@{NeoPixel}!fire@{fire}}
+\index{fire@{fire}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{fire()}{fire()}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::fire (\begin{DoxyParamCaption}\item[{int}]{duration = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Simuliere ein Feuer für eine bestimmte Zeit. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em duration} & die Zeit, die das Feuer brennen soll in Sekunden. Der Standardwert ist 10 Sekunden.\\
+\hline
+\end{DoxyParams}
+Wird kein Wert für {\ttfamily duration} angegeben, wird der Standardwert 10 verwendet.
+
+\begin{DoxyNote}{Zu beachten}
+Diese Methode ist äquivalent zu \mbox{\hyperlink{class_light_effects_ab0fbdb8ecb7807792f78f5bea47ca5c9}{Light\+Effects\+::fire()}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_neo_pixel_a4dc97c65eb9f29158897527934787786}\label{class_neo_pixel_a4dc97c65eb9f29158897527934787786}} 
+\index{NeoPixel@{NeoPixel}!flash@{flash}}
+\index{flash@{flash}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{flash()}{flash()}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::flash (\begin{DoxyParamCaption}\item[{int}]{duration = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Simuliere einen Blitz für eine bestimmte Zeit. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em duration} & die Zeit, die der Blitz dauern soll in Sekunden. Der Standardwert ist eine Sekunde.\\
+\hline
+\end{DoxyParams}
+Der Blitz kann sowohl für Gewitter, als auch für Explosionen eingesetzt werden. Wird kein Wert für {\ttfamily duration} angegeben, wird der Standardwert 1 verwendet.
+
+\begin{DoxyNote}{Zu beachten}
+Diese Methode ist äquivalent zu \mbox{\hyperlink{class_light_effects_a188308f811e28dbf52ec0d1b1fbd982b}{Light\+Effects\+::flash()}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_neo_pixel_a2baec551d5892662019a04f5943c8995}\label{class_neo_pixel_a2baec551d5892662019a04f5943c8995}} 
 \index{NeoPixel@{NeoPixel}!getNumberOfPixels@{getNumberOfPixels}}
 \index{getNumberOfPixels@{getNumberOfPixels}!NeoPixel@{NeoPixel}}
 \doxysubsubsection{\texorpdfstring{getNumberOfPixels()}{getNumberOfPixels()}}
@@ -200,7 +246,27 @@ Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_a5db05ed667
 {\em pixel} & Die Nummer der LED die die Farbe bekommen soll\\
 \hline
 \end{DoxyParams}
-Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}{Neo\+Pixel\+::set\+Color(\+CRGB color, int pixel)}} und unterscheidet sich von ihr nur in ihren Parametern. 
+Diese Methode macht das gleiche wie \mbox{\hyperlink{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}{Neo\+Pixel\+::set\+Color(\+CRGB color, int pixel)}} und unterscheidet sich von ihr nur in ihren Parametern. \mbox{\Hypertarget{class_neo_pixel_a592b314629766624baaf3af2f2ba9868}\label{class_neo_pixel_a592b314629766624baaf3af2f2ba9868}} 
+\index{NeoPixel@{NeoPixel}!torch@{torch}}
+\index{torch@{torch}!NeoPixel@{NeoPixel}}
+\doxysubsubsection{\texorpdfstring{torch()}{torch()}}
+{\footnotesize\ttfamily void Neo\+Pixel\+::torch (\begin{DoxyParamCaption}\item[{int}]{duration = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Simuliere eine Fackel für eine bestimmte Zeit. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em duration} & die Zeit, die die Fackeln leuchten sollen in Sekunden. Der Standardwert ist eine Sekunde.\\
+\hline
+\end{DoxyParams}
+Der Blitz kann sowohl für Gewitter, als auch für Explosionen eingesetzt werden. Wird kein Wert für {\ttfamily duration} angegeben, wird der Standardwert 1 verwendet.
+
+\begin{DoxyNote}{Zu beachten}
+Diese Methode ist äquivalent zu \mbox{\hyperlink{class_light_effects_add1b8dbda9e3801f004a53c5dd85befd}{Light\+Effects\+::torch()}} 
+\end{DoxyNote}
+
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
 \item 

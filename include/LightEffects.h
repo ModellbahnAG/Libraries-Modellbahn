@@ -37,7 +37,7 @@ class LightEffects {
     static void flash(NeoPixel* led, int duration = 1);
 
     /**
-    * @brief Simuliere eine Fackel. Für eine bestimmte Zeit.
+    * @brief Simuliere eine Fackel für eine bestimmte Zeit.
     *
     * @param led ein Zeiger auf die vorher erstellte Instanz von NeoPixel
     * @param duration die Zeit, die die Fackeln leuchten sollen in Sekunden. Der

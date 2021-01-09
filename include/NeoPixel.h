@@ -140,6 +140,44 @@ class NeoPixel {
     */
     int getNumberOfPixels();
 
+    /**
+    * @brief @copybrief LightEffects::flash()
+    *
+    * @param duration die Zeit, die der Blitz dauern soll in Sekunden. Der Standardwert ist eine Sekunde.
+    *
+    * @details Der Blitz kann sowohl für Gewitter, als auch für Explosionen
+    * eingesetzt werden. Wird kein Wert für @p duration angegeben, wird der
+    * Standardwert 1 verwendet.
+    *
+    * @note Diese Methode ist äquivalent zu LightEffects::flash()
+    */
+    void flash(int duration = 1);
+    /**
+    * @brief @copybrief LightEffects::torch()
+    *
+    * @param duration die Zeit, die die Fackeln leuchten sollen in Sekunden. Der
+    * Standardwert ist eine Sekunde.
+    *
+    * @details Der Blitz kann sowohl für Gewitter, als auch für Explosionen
+    * eingesetzt werden. Wird kein Wert für @p duration angegeben, wird der
+    * Standardwert 1 verwendet.
+    *
+    * @note Diese Methode ist äquivalent zu LightEffects::torch()
+    */
+    void torch(int duration = 10);
+    /**
+    * @brief @copybrief LightEffects::fire()
+    *
+    * @param duration die Zeit, die das Feuer brennen soll in Sekunden. Der
+    * Standardwert ist 10 Sekunden.
+    *
+    * @details Wird kein Wert für @p duration angegeben, wird der
+    * Standardwert 10 verwendet.
+    *
+    * @note Diese Methode ist äquivalent zu LightEffects::fire()
+    */
+    void fire(int duration = 10);
+
   private:
     int pin;
     int numPixel;
