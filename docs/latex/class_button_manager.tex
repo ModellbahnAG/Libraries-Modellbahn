@@ -1,0 +1,74 @@
+\hypertarget{class_button_manager}{}\doxysection{Button\+Manager Klassenreferenz}
+\label{class_button_manager}\index{ButtonManager@{ButtonManager}}
+
+
+Verwalte einfach mehrere Buttons in einem Programm.  
+
+
+
+
+{\ttfamily \#include $<$Button\+Manager.\+h$>$}
+
+\doxysubsection*{Öffentliche, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_button_manager_abac14494a447472d4611f12f913d5260}{add\+Button}} (\mbox{\hyperlink{class_button}{Button}} $\ast$new\+Button)
+\begin{DoxyCompactList}\small\item\em Füge einen neuen \mbox{\hyperlink{class_button}{Button}} hinzu der verwaltet werden soll. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}{handle\+Buttons}} ()
+\begin{DoxyCompactList}\small\item\em Überprüfe, ob ein \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob einer wieder aktiviert werden kann. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Verwalte einfach mehrere Buttons in einem Programm. 
+
+Es werden keine Instanzen dieser Klasse erstellt. 
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_button_manager_abac14494a447472d4611f12f913d5260}\label{class_button_manager_abac14494a447472d4611f12f913d5260}} 
+\index{ButtonManager@{ButtonManager}!addButton@{addButton}}
+\index{addButton@{addButton}!ButtonManager@{ButtonManager}}
+\doxysubsubsection{\texorpdfstring{addButton()}{addButton()}}
+{\footnotesize\ttfamily static void Button\+Manager\+::add\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_button}{Button}} $\ast$}]{new\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Füge einen neuen \mbox{\hyperlink{class_button}{Button}} hinzu der verwaltet werden soll. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em new\+Button} & Zeiger auf einen \mbox{\hyperlink{class_button}{Button}}\\
+\hline
+\end{DoxyParams}
+Verwendung\+: 
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+\mbox{\Hypertarget{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}\label{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}} 
+\index{ButtonManager@{ButtonManager}!handleButtons@{handleButtons}}
+\index{handleButtons@{handleButtons}!ButtonManager@{ButtonManager}}
+\doxysubsubsection{\texorpdfstring{handleButtons()}{handleButtons()}}
+{\footnotesize\ttfamily static void Button\+Manager\+::handle\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Überprüfe, ob ein \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob einer wieder aktiviert werden kann. 
+
+\begin{DoxyNote}{Zu beachten}
+Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf einen \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \textcolor{keywordtype}{void} loop() \{}
+\DoxyCodeLine{  \mbox{\hyperlink{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}{ButtonManager::handleButtons}}();}
+\DoxyCodeLine{  delay(10);}
+\DoxyCodeLine{\} }
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\begin{DoxyAttention}{Achtung}
+Das Überprüfen der Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit delay() und einigen anderen Funktionen kommen kann.
+\end{DoxyAttention}
+Wurde ein aktiver \mbox{\hyperlink{class_button}{Button}} gedrückt, wird die durch \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{Button\+::set\+Callback()}} festgelegte Funktion ausgeführt. 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennis/\+Cloud\+Station/\+Schule/\+Modellbahn/\+Libraries-\/\+Modellbahn/include/\mbox{\hyperlink{_button_manager_8h}{Button\+Manager.\+h}}\end{DoxyCompactItemize}

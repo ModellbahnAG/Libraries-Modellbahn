@@ -1,0 +1,124 @@
+\hypertarget{class_button}{}\doxysection{Button Klassenreferenz}
+\label{class_button}\index{Button@{Button}}
+
+
+Der \mbox{\hyperlink{class_button}{Button}} wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im \mbox{\hyperlink{class_button}{Button}} eingebaute) Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist.  
+
+
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button_a9ba43424a686758b870554d19064fb83}{Button}} (byte input\+Pin, byte light\+Pin, unsigned long delay\+Time=60)
+\begin{DoxyCompactList}\small\item\em Erstelle eine Instanz der Klasse \mbox{\hyperlink{class_button}{Button}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback}} (const lambda\+\_\+callback\+\_\+t \&action)
+\begin{DoxyCompactList}\small\item\em Definiere eine Funktion, die ausgeführt wird, sobald der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{handle\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Überprüfe, ob der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob er wieder aktiviert werden kann. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Der \mbox{\hyperlink{class_button}{Button}} wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im \mbox{\hyperlink{class_button}{Button}} eingebaute) Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist. 
+
+Der \mbox{\hyperlink{class_button}{Button}} ist mit dem internen PULLUP-\/\+Widerstand angeschlossen, das heißt, dass der \mbox{\hyperlink{class_button}{Button}} nur zwischen {\ttfamily GND} und dem Pin ohne einen externen Widerstand angeschlossen wird.
+
+\begin{DoxyNote}{Zu beachten}
+Alle Instanzen müssen vor oder im setup erzeugt werdenund die Methode \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{Button\+::handle\+Button()}} muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \textcolor{keywordtype}{void} loop() \{}
+\DoxyCodeLine{  myButton.handleButton();}
+\DoxyCodeLine{  delay(10);}
+\DoxyCodeLine{\} }
+
+\end{DoxyCode}
+ Bei der Verwendung von mehreren Buttons wird die Verwendung von \mbox{\hyperlink{class_button_manager}{Button\+Manager}} empfohlen.
+\end{DoxyNote}
+\begin{DoxyAttention}{Achtung}
+Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit delay() und einigen anderen Funktionen kommen kann.
+\end{DoxyAttention}
+\begin{DoxyPrecond}{Vorbedingung}
+Um die Funktionen von \mbox{\hyperlink{class_button}{Button}} nutzen zu können, muss zuerst ein Objekt von \mbox{\hyperlink{class_button}{Button}} erzeugt werden. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Buttton myButton = \mbox{\hyperlink{class_button_a9ba43424a686758b870554d19064fb83}{Button}}(buttonPin, lightPin, delayTime); }
+
+\end{DoxyCode}
+ {\ttfamily button\+Pin}, {\ttfamily light\+Pin}, {\ttfamily delay\+Time} müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. 
+\end{DoxyPrecond}
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_button_a9ba43424a686758b870554d19064fb83}\label{class_button_a9ba43424a686758b870554d19064fb83}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{byte}]{input\+Pin,  }\item[{byte}]{light\+Pin,  }\item[{unsigned long}]{delay\+Time = {\ttfamily 60} }\end{DoxyParamCaption})}
+
+
+
+Erstelle eine Instanz der Klasse \mbox{\hyperlink{class_button}{Button}}. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em input\+Pin} & Pin, an den der \mbox{\hyperlink{class_button}{Button}} angeschlossen ist \\
+\hline
+{\em light\+Pin} & Pin, an den das Licht des Buttons angeschlossen ist \\
+\hline
+{\em delay\+Time} & Zeit in Sekunden, die der \mbox{\hyperlink{class_button}{Button}} nachdem er gedrückt wurde deaktiviert ist. Während dieser Zeit wird auch das Licht des Buttons deaktiviert. Der Standardwert ist 60\\
+\hline
+\end{DoxyParams}
+Wird {\ttfamily delay\+Time} nicht angegeben, wird der Standartwert 60 verwendet. 
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}\label{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}} 
+\index{Button@{Button}!handleButton@{handleButton}}
+\index{handleButton@{handleButton}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{handleButton()}{handleButton()}}
+{\footnotesize\ttfamily void Button\+::handle\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Überprüfe, ob der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob er wieder aktiviert werden kann. 
+
+Wurde der \mbox{\hyperlink{class_button}{Button}} gedrückt und ist aktiv, wird die durch \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback()}} festgelegte Funktion ausgeführt.
+
+\begin{DoxyNote}{Zu beachten}
+Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} loop() \{}
+\DoxyCodeLine{    myButton.handleButton();}
+\DoxyCodeLine{    delay(10);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\end{DoxyNote}
+\begin{DoxyAttention}{Achtung}
+Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit {\ttfamily delay()} und einigen anderen Funktionen kommen kann. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}\label{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}} 
+\index{Button@{Button}!setCallback@{setCallback}}
+\index{setCallback@{setCallback}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{setCallback()}{setCallback()}}
+{\footnotesize\ttfamily void Button\+::set\+Callback (\begin{DoxyParamCaption}\item[{const lambda\+\_\+callback\+\_\+t \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definiere eine Funktion, die ausgeführt wird, sobald der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em action} & Lampdafunktion (\mbox{\hyperlink{struct_call_lambda}{Call\+Lambda}}) die ausgeführt wird, sobald der \mbox{\hyperlink{class_button}{Button}} gedrückt wurde. Am Ende muss 0 zurückgegeben werden.\\
+\hline
+\end{DoxyParams}
+Verwendung\+: 
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennis/\+Cloud\+Station/\+Schule/\+Modellbahn/\+Libraries-\/\+Modellbahn/include/\mbox{\hyperlink{_button_8h}{Button.\+h}}\end{DoxyCompactItemize}
